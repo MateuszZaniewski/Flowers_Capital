@@ -1,1 +1,73 @@
-$blu : #e65d28;
+// mixins 
+
+@mixin grotleyFont() {
+    @font-face {
+      font-family: 'grotley';
+      src: url('../fonts/GrotleyRegular-mLEWv.otf');
+    }
+  }
+
+
+//spacings
+$spc4   : 4px;
+$spc8   : 8px;
+$spc12  : 12px;
+$spc20  : 20px;
+$spc24  : 24px;
+$spc28  : 28px;
+$spc32  : 32px;
+$spc36  : 36px;
+$spc40  : 40px;
+$spc48  : 48px;
+$spc56  : 56px;
+$spc64  : 64px;
+$spc72  : 72px;
+$spc96  : 96px;
+$spc120 : 120px;
+$spc144 : 144px;
+$spc168 : 168px;
+
+
+// colors 
+
+$black600 : #777777;
+$black700 : #636363;
+$black800 : #4E4E4D;
+$black900 : #3A3A38;
+
+$gold400 : #FFE58A;
+$gold500 : #E6CD75;
+$gold600 : #C9B25F;
+$gold700 : #AC974B;
+$gold800 : #8F7C3A;
+
+$white100 : #F9F8F9;
+$white200 : #E5E0E5;
+$white300 : #D0C9D0;
+$white400 : #BCB2BC;
+
+
+
+// font sizes mobile 
+
+$mobileH1   : 44px;
+$mobileH2   : 35px;
+$mobileH3   : 28px;
+$mobileH4   : 23px;
+$mobileBody : 18px;
+$mobileCap  : 14px;
+
+
+// font sizes desktop 
+
+$desktopH1   : 86px;
+$desktopH2   : 55px;
+$desktopH3   : 44px;
+$desktopH4   : 35px;
+$desktopH5   : 28px;
+$desktopH6   : 23px;
+$desktopBody : 18px;
+$desktopCap  : 14px;
+
+
+

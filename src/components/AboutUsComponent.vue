@@ -3,16 +3,13 @@
 </script>
 
 <template>
-  <router-view/>
+  <div>
+    <h2>AboutUs Component</h2>
+  </div>
 </template>
 
 <style lang="scss">
 
 @import '@/assets/_variables.scss';
-@include grotleyFont();
-*{
-  font-family: 'grotley', sans-serif;
-  box-sizing: border-box;
-}
 
 </style>
