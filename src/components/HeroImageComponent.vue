@@ -8,10 +8,13 @@
     </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 
 @import '@/assets/_variables.scss';
 
+div {
+    padding-top: 5rem;
+}
 
 </style>
 

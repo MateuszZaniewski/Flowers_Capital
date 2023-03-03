@@ -1,69 +1,67 @@
 <script setup>
+import { ref } from 'vue';
+
 console.log('hello script setup')
+
+let toggled = ref(false)
+
+function isToggled() {
+    toggled.value = !toggled.value
+    console.log(toggled)
+}
 </script>
 
 <template>
-    <header>
-        <div class="hamburger--Menu">
-                    
-        </div>
-    </header>
+        <header>
+            <div class="hamburger">
+                <span class="hamburger--bar"></span>
+                <span class="hamburger--bar"></span>
+                <span class="hamburger--bar"></span>
+            </div>
+            <p class="logoText">Flower's Capital</p>
+        </header>
 </template>
 
 <style scoped lang="scss">
 
 @import '@/assets/_variables.scss';
 
-.hamburger--Menu {
-    margin-top: 1.5rem;
-    width: 30px;
-    height: 2px;
-    background: black;
-    position: relative;
-    
-
-    &::after {
-        content: '';
-        position: absolute;
-        top: -8px;
-        width: 30px;
-        height: 2px;
-        background: inherit;
-        
-
+    header{
+        display: flex;
+        justify-content: center;
+        padding-top: 15px;
     }
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 8px;
-        width: 30px;
-        height: 2px;
-        background: inherit;
-        
-
+    .logoText {
+        font-size: 35px;
+        line-height: 100%;
+        letter-spacing: -0.01em;
+        color: $gold600;
+        text-align: center;
+        margin: 0;
+        width: 80%;
+        justify-self: center;
     }
 
-    &.open {
-        transform: rotate(720deg);
-        background-color: transparent;
-        
+    .hamburger {
+        position: absolute;
+        top: 21px;
+        left: 5.128vw;
+        display: flex;
+        flex-flow: column nowrap;
+        width: 10%;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
 
-        &::before {
-            transform: rotate(45deg) translate(-2px, -6px);
-            background-color: black;
+        .hamburger--bar{
+            height: max(0.5vw, 3px);
+            width: clamp(23px, 6vh, 35px);
+            color: $gold600;
+            border: 1px solid $gold600;
+            background: $gold600;
+            
         }
-
-        &::after {
-            width: 28px;
-            transform: rotate(-45deg) translate(-5px, 9px);
-            background-color: black;
-        }
-}
-
-
-
-}
-
+    }
 
 </style>
