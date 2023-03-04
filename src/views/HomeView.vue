@@ -20,14 +20,6 @@ import FooterComponent from '../components/FooterComponent.vue';
   <div>
     <HeaderComponent/>
     <HeroImageComponent/>
-    <AboutUsComponent/>
-    <ShopComponent/>
-    <WeddingAdvertiserComponent/>
-    <WeddingComponent/>
-    <HowWeDoItComponent/>
-    <BlogComponent/>
-    <InstagramComponent/>
-    <FooterComponent/>
   </div>
 </template>
 

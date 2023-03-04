@@ -3,17 +3,33 @@
 </script>
 
 <template>
-    <div>
-        <h2>HeroImage Component</h2>
-    </div>
+    <main>
+        <div class="heroImageWrapper">
+            <img src="../assets/piwoniaMobile.png">
+        </div>
+    </main>
+    
 </template>
 
 <style scoped lang="scss">
 
 @import '@/assets/_variables.scss';
 
-div {
-    padding-top: 5rem;
+main {
+    background: $white100;
+    overflow: hidden;
+}
+
+.heroImageWrapper {
+
+    img {
+        height: 100%;
+        width: 100%;
+        rotate: -110deg;
+        overflow: hidden;
+        
+    }
+    
 }
 
 </style>
