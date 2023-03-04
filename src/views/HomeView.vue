@@ -17,13 +17,13 @@ import FooterComponent from '../components/FooterComponent.vue';
 </script>
 
 <template>
-  <div>
+  <div class="HomeViewwrapper">
     <HeaderComponent/>
     <HeroImageComponent/>
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 
 
 
