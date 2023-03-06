@@ -10,8 +10,6 @@ function isToggled() {
     console.log(toggled.value)
 }
 
-
-
 const windowWidth = window.innerWidth
 
 </script>
@@ -59,17 +57,16 @@ const windowWidth = window.innerWidth
 
 @import '@/assets/_variables.scss';
 
-    #trans {
-        background: transparent;
-    }
-
     header{
         display: flex;
         justify-content: center;
         padding-top: 15px;
         width: 100%;
-        background: $white100;
         height: fit-content;
+        max-width: 2000px;
+        margin: 0 auto;
+        background: transparent;
+        position: absolute;
     }
 
     .logoText {
@@ -79,7 +76,7 @@ const windowWidth = window.innerWidth
         color: $gold600;
         text-align: center;
         justify-self: center;
-        margin: 0;
+        margin: 0 auto;
     }
 
     .hamburger {
@@ -161,7 +158,6 @@ const windowWidth = window.innerWidth
 
         span {
             font-size: $desktopBody;
-            
             color: $gold600;
         }
 
