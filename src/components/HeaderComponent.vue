@@ -11,11 +11,12 @@ function isToggled() {
 }
 
 const windowWidth = window.innerWidth
+console.log(window.document.body)
 
 </script>
 
 <template>
-        <header>
+        <header :style="{ background: !toggled ? '#F9F8F9' : 'transparent'}">
             <div class="mobileHeader" v-if="windowWidth < 900">
                 <div v-if="toggled" class="hamburger" @click="isToggled">
                     <span class="hamburger--bar bartop"></span>
@@ -47,6 +48,35 @@ const windowWidth = window.innerWidth
                         <img src="../assets/user.png" />
                     </div>
                 </div>
+            </div>
+            <div :style="{ display: !toggled ? 'block' : 'none'}" class="dropdown">
+                <div class="dropdown__links">
+                    <span>About us</span>
+                    <span>Shop</span>
+                    <span>Weedings</span>
+                    <span>Gallery</span>
+                    <span>Blog</span>
+                </div>  
+                <div class="dropdown__contact">
+                    <span>Phone: 212 236-7842</span>
+                    <span>contact@flowerscapital.com</span>
+                </div>
+                <div class="dropdown__socials">
+                    <div>
+                        <img src="../assets/facebook.png"/>
+                        <span>Flowers'Capital NYC</span>
+                    </div>
+                    <div>
+                        <img src="../assets/instagram.png" />
+                        <span>@flowers'capitalNYC</span>
+                    </div>
+                    <div>
+                        <img src="../assets/pinterest.png" />
+                        <span>Flowers'Capital NYC</span>
+                    </div>
+                </div>
+                
+
             </div>
         </header>
 
@@ -174,6 +204,55 @@ const windowWidth = window.innerWidth
             line-height: 52.8px;
             letter-spacing: -0.02em;
 
+        }
+    }
+
+
+
+    .dropdown{
+        position: absolute;
+        top: 49px;
+        font-size: $mobileH4;
+        padding-left: 16px;
+        background: $white100;
+        width: 100%;
+        display: none;
+        height: 100vh;
+        
+
+        &__links{
+            display: flex;
+            flex-flow: column nowrap;
+            padding-top: 60px;
+            
+            span {
+                padding-bottom: 1rem;
+            }
+        }
+
+        &__contact {
+            padding-top: 40px;
+            display: flex;
+            flex-flow: column nowrap;
+            
+
+            span {
+                padding-bottom: 20px;
+            }
+
+            span + span {
+                color: $gold600;
+            }
+        }
+
+        &__socials {
+            padding-top: 30px;
+
+            div {
+                display: flex;
+                gap: 12px;
+                padding-bottom: 15px;
+            }
         }
     }
 
