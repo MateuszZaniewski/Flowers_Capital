@@ -8,15 +8,17 @@ let toggled = ref(true)
 function isToggled() {
     toggled.value = !toggled.value
     console.log(toggled.value)
+    let body = window.document.querySelector('body')
+    toggled.value ? body.style.position = 'relative' : body.style.position = 'fixed'
 }
 
 const windowWidth = window.innerWidth
-console.log(window.document.body)
 
 </script>
 
 <template>
-        <header :style="{ background: !toggled ? '#F9F8F9' : 'transparent'}">
+        <header :style="{ background: !toggled ? '#F9F8F9' : 'transparent' , 
+                          position : !toggled ? 'fixed' : 'absolute'}">
             <div class="mobileHeader" v-if="windowWidth < 900">
                 <div v-if="toggled" class="hamburger" @click="isToggled">
                     <span class="hamburger--bar bartop"></span>
@@ -49,7 +51,8 @@ console.log(window.document.body)
                     </div>
                 </div>
             </div>
-            <div :style="{ display: !toggled ? 'block' : 'none'}" class="dropdown">
+            <div :style="{ display: !toggled ? 'block' : 'none' , position: !toggled ? 'fixed' : 'relative'}"
+            class="dropdown">
                 <div class="dropdown__links">
                     <span>About us</span>
                     <span>Shop</span>
@@ -223,21 +226,21 @@ console.log(window.document.body)
         &__links{
             display: flex;
             flex-flow: column nowrap;
-            padding-top: 60px;
+            padding-top: 2.571vh;
             
             span {
-                padding-bottom: 1rem;
+                padding-bottom: 1.286vh;
             }
         }
 
         &__contact {
-            padding-top: 40px;
+            padding-top: 4.714vh;
             display: flex;
             flex-flow: column nowrap;
             
 
             span {
-                padding-bottom: 20px;
+                padding-bottom: 2.857vh;
             }
 
             span + span {
@@ -246,12 +249,12 @@ console.log(window.document.body)
         }
 
         &__socials {
-            padding-top: 30px;
+            padding-top: 3.286vh;
 
             div {
                 display: flex;
-                gap: 12px;
-                padding-bottom: 15px;
+                gap: 1.714vh;
+                padding-bottom: 2.143vh;
             }
         }
     }

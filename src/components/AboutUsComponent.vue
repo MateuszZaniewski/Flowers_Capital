@@ -3,13 +3,17 @@
 </script>
 
 <template>
-  <div>
-    <h2>AboutUs Component</h2>
-  </div>
+  <section class="aboutUswrapper">
+
+  </section>
 </template>
 
 <style lang="scss">
 
 @import '@/assets/_variables.scss';
+
+.aboutUswrapper {
+  padding-top: 45px;
+}
 
 </style>

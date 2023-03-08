@@ -20,6 +20,7 @@ import FooterComponent from '../components/FooterComponent.vue';
   <div class="HomeViewwrapper">
     <HeaderComponent/>
     <HeroImageComponent/>
+    <AboutUsComponent/>
   </div>
 </template>
 
