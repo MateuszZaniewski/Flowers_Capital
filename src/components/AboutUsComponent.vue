@@ -93,15 +93,16 @@
       
 
       h2 {
-        transform: rotate(270deg);
+        transform: rotate(180deg);
         white-space: nowrap;
         color: $gold600;
         margin: 0;
         width: fit-content;
         position: absolute;
-        top: 23%;
-        right: 0;
-        left: 0;
+        top: 14%;
+        right: 10px;
+        writing-mode: vertical-rl;
+        font-size: $mobileH2;
         
       }
     }
@@ -112,7 +113,7 @@
 
 
 .aboutUsInfos{
-  margin: 60px 16px 0 88px;
+  margin: 60px 16px 0 80px;
 
   h3 {
     color: $gold600;
@@ -138,5 +139,64 @@
   }
 }
 
+@media screen and (min-width: 800px) and (max-width: 1099px) {
+  .aboutUswrapper {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+}
+
+
+@media screen and (min-width: 1100px) {
+  
+  .aboutUswrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1600px;
+    margin: 50px auto 0 auto;
+
+    .aboutUsMain {
+      width: 60%;
+      max-height: 700px;
+      max-width: 1000px;
+    }
+
+    .aboutUsInfos{
+      margin: 60px 100px 0 20px;
+      width: 45%;
+    
+      h3 {
+        color: $gold600;
+        line-height: 33.6px;
+        font-size: $desktopH4;
+        letter-spacing: -1px;
+        padding-bottom: $spc32;
+        width: 100%;
+      }
+    
+      p {
+        line-height: 27px;
+        font-size: $desktopH6;
+        padding-bottom: 21px;
+        width: 80%;
+      }
+    
+      &__leaf {
+        position: relative;
+    
+        img {
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+
+  }
+
+  
+
+}
 
 </style>
