@@ -4,7 +4,6 @@ const piwoniaMobile = '../src/assets/piwoniaMobile.png'
 function piwoniaImageResizer() {
     return window.innerWidth < 1100 ? piwoniaMobile : piwoniaDesktop
 }
-console.log(piwoniaImageResizer)
 </script>
 
 <template>
@@ -33,6 +32,7 @@ console.log(piwoniaImageResizer)
 
 main {
     background: $white100;
+    width: 100%;
 
     h1 {
         font-size: $mobileH1;

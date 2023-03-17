@@ -1,4 +1,13 @@
 <script setup>
+import { ref, onMounted } from "vue"
+
+const headerWidth = ref(null);
+const divWidth = ref(null); 
+
+onMounted(() => {
+      divWidth.value = headerWidth.value.clientWidth;
+      console.log(divWidth.value)
+    });
 
 </script>
 
@@ -7,20 +16,20 @@
 
 
     <div class="aboutUsMain">
-      <div class="aboutUsMain__header">
+      <div class="aboutUsMain__header" ref="headerWidth">
         
           <h2>About us</h2> 
         
       </div>
       <div class="aboutUsMain__image">
-        <div>
-          <img src="../assets/aboutImageHighRes.png">
+        <div class="imageDiv">
+          
         </div>
       </div>
     </div>
 
 
-    <div class="aboutUsInfos">
+    <div class="aboutUsInfos" :style="{marginLeft : divWidth + 'px'}">
       <h3>This is an online flower shop where you can buy guilt-free floral magnificence that doesn’t hurt our planet!</h3>
       <p>Our mission is to provide our customers with the highest quality flowers and plants, along with exceptional customer service.</p>
       <div class="aboutUsInfos__leaf">
@@ -39,6 +48,7 @@
 .aboutUswrapper {
   margin-top: 45px;
   max-width: 800px;
+  z-index: 1;
 
 
   .aboutUsMain {
@@ -46,25 +56,25 @@
     display: flex;
 
     &__image {
-      width: 80%;
+      height: auto;
+      width: auto;
       position: relative;
+      padding-left: 20px;
+      padding-bottom: 20px;
 
-      div {
-        width: 80%;
-        height: 100%;
-
-        img{
-          height: 100%;
-          width: 100%;
-          padding-left: 8%;
-          padding-bottom: 8%;
-        }
+      .imageDiv {
+        height: 76.923vw;
+        width: 55.897vw;
+        background-image: url("../assets/aboutImageHighRes.png");
+        background-size: cover;
+        background-repeat: no-repeat;
       }
     } 
 
     &__image:before{
       content: '';
       position: absolute;
+      z-index: 1;
       transform: translateY(-35%);
       top: 45%;
       left: 0;
@@ -77,10 +87,11 @@
     &__image:after{
       content: '';
       position: absolute;
+      z-index: 1;
       transform: translateY(-50%);
       top: 50%;
       left: -5%;
-      width: 90%;
+      width: 110%;
       height: 100%;
       border-bottom: 2px solid $gold600;
 
@@ -89,6 +100,7 @@
     &__header{
 
       width: 20%;
+      max-width: 130px;
       position: relative;
       
 
@@ -99,6 +111,7 @@
         margin: 0;
         width: fit-content;
         position: absolute;
+        z-index: 1;
         top: 14%;
         right: 10px;
         writing-mode: vertical-rl;
@@ -113,9 +126,10 @@
 
 
 .aboutUsInfos{
-  margin: 60px 16px 0 80px;
+  margin-right: 32px;
 
   h3 {
+    margin-top: 64px;
     color: $gold600;
     line-height: 33.6px;
     font-size: $mobileH3;
@@ -134,33 +148,81 @@
 
     img {
       position: absolute;
+      z-index: 1;
       left: 0;
     }
   }
 }
 
-@media screen and (min-width: 800px) and (max-width: 1099px) {
+@media screen and (min-width: 800px) and (max-width: 1023px) {
   .aboutUswrapper {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
 }
+
+.imageDiv {
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/aboutImageHighRes.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 }
 
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
   
   .aboutUswrapper {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1600px;
-    margin: 50px auto 0 auto;
+    max-width: 1400px;
+    margin: 50px auto 0 40px;
 
     .aboutUsMain {
       width: 60%;
       max-height: 700px;
       max-width: 1000px;
+
+      &__image {
+        height: auto;
+        width: auto;
+        position: relative;
+        padding-left: 20px;
+        padding-bottom: 20px;
+  
+        .imageDiv {
+          height: 660px;
+          width: 420px;
+          background-image: url("../assets/aboutImageHighRes.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+      
+      &__header{
+
+        width: 20%;
+        max-width: 130px;
+        position: relative;
+        
+  
+        h2 {
+          transform: rotate(180deg);
+          white-space: nowrap;
+          color: $gold600;
+          margin: 0;
+          width: fit-content;
+          position: absolute;
+          z-index: 1;
+          top: 14%;
+          right: 10px;
+          writing-mode: vertical-rl;
+          font-size: $desktopH3;
+          
+        }
+      }
     }
 
     .aboutUsInfos{
@@ -188,6 +250,7 @@
     
         img {
           position: absolute;
+          z-index: 1;
           left: 0;
         }
       }

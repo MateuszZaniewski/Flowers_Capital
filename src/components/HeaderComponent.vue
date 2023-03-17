@@ -1,15 +1,11 @@
 <script setup>
 import { ref } from 'vue';
 
-console.log('hello script setup')
-
 let toggled = ref(true)
 
 function isToggled() {
     toggled.value = !toggled.value
     console.log(toggled.value)
-    let body = window.document.querySelector('body')
-    toggled.value ? body.style.position = 'relative' : body.style.position = 'fixed'
 }
 
 const windowWidth = window.innerWidth
@@ -220,7 +216,7 @@ const windowWidth = window.innerWidth
         background: $white100;
         width: 100%;
         display: none;
-        height: 100vh;
+        z-index: 99;
         
 
         &__links{
