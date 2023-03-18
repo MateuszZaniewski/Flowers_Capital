@@ -13,8 +13,7 @@ const windowWidth = window.innerWidth
 </script>
 
 <template>
-        <header :style="{ background: !toggled ? '#F9F8F9' : 'transparent' , 
-                          position : !toggled ? 'fixed' : 'absolute'}">
+        <header :style="{ background: !toggled ? '#F9F8F9' : 'transparent'}">
             <div class="mobileHeader" v-if="windowWidth < 900">
                 <div v-if="toggled" class="hamburger" @click="isToggled">
                     <span class="hamburger--bar bartop"></span>
@@ -47,7 +46,7 @@ const windowWidth = window.innerWidth
                     </div>
                 </div>
             </div>
-            <div :style="{ display: !toggled ? 'block' : 'none' , position: !toggled ? 'fixed' : 'relative'}"
+            <div :style="{ display: !toggled ? 'block' : 'none'}"
             class="dropdown">
                 <div class="dropdown__links">
                     <span>About us</span>
@@ -91,8 +90,8 @@ const windowWidth = window.innerWidth
         justify-content: center;
         padding-top: 15px;
         width: 100%;
+        max-width: 5000px;
         height: fit-content;
-        max-width: 2000px;
         margin: 0 auto;
         background: transparent;
         position: absolute;
@@ -162,10 +161,14 @@ const windowWidth = window.innerWidth
     .desktopHeader {
         width: 95%;
         margin: 0 auto;
+        max-width: 2000px;
+
     }
     .desktopWrapper {
         display: flex;
         justify-content: space-evenly;
+        max-width: 2000px;
+        margin: 0 auto;
         
         .desktop__spansWrapperLeft{
             gap: 4.097vw;
@@ -217,6 +220,7 @@ const windowWidth = window.innerWidth
         width: 100%;
         display: none;
         z-index: 99;
+        border-bottom: 1px solid $gold600;
         
 
         &__links{

@@ -13,18 +13,12 @@ onMounted(() => {
 
 <template>
   <section class="aboutUswrapper">
-
-
     <div class="aboutUsMain">
       <div class="aboutUsMain__header" ref="headerWidth">
-        
           <h2>About us</h2> 
-        
       </div>
       <div class="aboutUsMain__image">
-        <div class="imageDiv">
-          
-        </div>
+        <div class="imageDiv"></div>
       </div>
     </div>
 
@@ -32,12 +26,22 @@ onMounted(() => {
     <div class="aboutUsInfos" :style="{marginLeft : divWidth + 'px'}">
       <h3>This is an online flower shop where you can buy guilt-free floral magnificence that doesn’t hurt our planet!</h3>
       <p>Our mission is to provide our customers with the highest quality flowers and plants, along with exceptional customer service.</p>
-      <div class="aboutUsInfos__leaf">
-        <p>All our products are 100% plastic-free, super sustainable and promote zero flower waste.</p>
-        <img src="../assets/leaf.png">
-      </div>
-
+      <p>All our products are 100% plastic-free, super sustainable and promote zero flower waste.</p>
     </div>
+
+    <div class="flex">
+      <div class="aboutUsNext">
+        <div class="doniczkaImage__wrapper">
+          <div class="doniczkaImage"></div>
+        </div>
+      </div>
+    </div>
+    <div class="bukietImage__wrapper">
+      <div class="bukietImage"></div>
+    </div>
+    
+    
+
   </section>
 </template>
 
@@ -127,6 +131,7 @@ onMounted(() => {
 
 .aboutUsInfos{
   margin-right: 32px;
+  position: relative;
 
   h3 {
     margin-top: 64px;
@@ -142,17 +147,81 @@ onMounted(() => {
     font-size: $mobileBody;
     padding-bottom: 21px;
   }
+}
 
-  &__leaf {
+.flex {
+  display: flex;
+}
+
+.aboutUsNext {
+
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 40%;
+
+  .doniczkaImage__wrapper{
+
+    height: auto;
+    width: auto;
     position: relative;
+    padding-left: 20px;
+    padding-bottom: 20px;
 
-    img {
+    &:before{
+      content: '';
       position: absolute;
       z-index: 1;
+      transform: translateY(-35%);
+      top: 45%;
       left: 0;
+      width: 90%;
+      height: 90%;
+      border-left: 2px solid $gold600;
+  
     }
+
+    &:after{
+      content: '';
+      position: absolute;
+      z-index: 1;
+      transform: translateY(-50%);
+      top: 50%;
+      left: -5%;
+      width: 110%;
+      height: 100%;
+      border-bottom: 2px solid $gold600;
+  
+    }
+
   }
+  
+  .doniczkaImage {
+    height: 35.897vw;
+    width: 35.897vw;
+    background-image: url('../assets/doniczkaHighRes.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+
+  }
+
 }
+
+
+.bukietImage__wrapper {
+
+  width: 60%;
+
+  .bukietImage {
+    height: 150px;
+    width: 150px;
+    background-image: url('../assets/bukietHighRes.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+}
+
 
 @media screen and (min-width: 800px) and (max-width: 1023px) {
   .aboutUswrapper {
@@ -176,9 +245,8 @@ onMounted(() => {
   .aboutUswrapper {
     display: flex;
     justify-content: space-between;
-    width: 100%;
     max-width: 1400px;
-    margin: 50px auto 0 40px;
+    margin: 50px auto 0 auto;
 
     .aboutUsMain {
       width: 60%;

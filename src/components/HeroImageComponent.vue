@@ -66,7 +66,8 @@ main {
 .downWrapper{
     display: flex;
     justify-content: center;
-    padding-top: $spc72;
+    padding-top: $spc32;
+    padding-bottom: $spc32;
 }
 
 @media screen and (min-width: 1100px) {
