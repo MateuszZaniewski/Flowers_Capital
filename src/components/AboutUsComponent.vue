@@ -34,14 +34,12 @@ onMounted(() => {
         <div class="doniczkaImage__wrapper">
           <div class="doniczkaImage"></div>
         </div>
+        <div class="bukietImage__wrapper">
+          <div class="bukietImage"></div>
+        </div>
       </div>
     </div>
-    <div class="bukietImage__wrapper">
-      <div class="bukietImage"></div>
-    </div>
     
-    
-
   </section>
 </template>
 
@@ -151,6 +149,7 @@ onMounted(() => {
 
 .flex {
   display: flex;
+  gap: 50px;
 }
 
 .aboutUsNext {
@@ -158,6 +157,7 @@ onMounted(() => {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
   width: 40%;
 
   .doniczkaImage__wrapper{
@@ -213,11 +213,12 @@ onMounted(() => {
   width: 60%;
 
   .bukietImage {
-    height: 150px;
-    width: 150px;
+    height: 268px;
+    width: 169px;
     background-image: url('../assets/bukietHighRes.png');
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 50% 50% 0 0;
   }
 
 }
