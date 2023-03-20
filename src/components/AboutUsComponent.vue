@@ -2,12 +2,15 @@
 import { ref, onMounted } from "vue"
 
 const headerWidth = ref(null);
-const divWidth = ref(null); 
+const divWidth = ref(null);
+const windowWidth = window.innerWidth;
 
 onMounted(() => {
       divWidth.value = headerWidth.value.clientWidth;
       console.log(divWidth.value)
     });
+
+
 
 </script>
 
@@ -23,14 +26,14 @@ onMounted(() => {
     </div>
 
 
-    <div class="aboutUsInfos" :style="{marginLeft : divWidth + 'px'}">
+    <div class="aboutUsInfos">
       <h3>This is an online flower shop where you can buy guilt-free floral magnificence that doesn’t hurt our planet!</h3>
       <p>Our mission is to provide our customers with the highest quality flowers and plants, along with exceptional customer service.</p>
       <p>All our products are 100% plastic-free, super sustainable and promote zero flower waste.</p>
     </div>
   </section>
 
-  <!-- <div class="AboutUsMobileWrapper">
+  <div class="AboutUsMobileWrapper" v-if="windowWidth < 1024">
       <div class="aboutUsNext">
         <div class="doniczkaImage__wrapper">
           <div class="doniczkaImage"></div>
@@ -39,15 +42,15 @@ onMounted(() => {
           <div class="bukietImage"></div>
         </div>
       </div>
-    </div> -->
+    </div>
 
-  <!-- <div class="aboutUsInfos" :style="{marginLeft : divWidth + 'px'}">
+  <div class="aboutUsInfos"  v-if="windowWidth < 1024">
       <p>We pride ourselves on the wide variety of fresh flowers and plants that we offer.</p>
       <p>Whether you're looking for a beautiful bouquet of roses for a special occasion, or a lush green plant to liven up your home or office, we have something to suit everyone's taste and budget.</p>
       <button>Learn more</button>
-    </div> -->
+    </div>
 
-    <div class="AboutUsDesktopWrapper">
+    <div class="AboutUsDesktopWrapper" v-if="windowWidth >= 1024">
       <div class="aboutUsLeft">
         <div class="aboutUsInfos">
           <p>We pride ourselves on the wide variety of fresh flowers and plants that we offer.</p>
@@ -161,6 +164,7 @@ onMounted(() => {
   margin-right: 32px;
   position: relative;
   padding-bottom: $spc32;
+  margin-left: clamp(10px, 20vw, 130px);
 
   h3 {
     margin-top: 64px;
@@ -283,16 +287,28 @@ onMounted(() => {
   width: 90%;
   margin: 0 auto;
   justify-content: space-around;
+  padding-bottom: 100px;
 
   .aboutUsLeft {
     width: 40%;
+    align-self: center;
+    margin: 0 100px 0 20vw;
+
+    .aboutUsInfos {
+      padding: 0;
+      margin: 0;
+      
+    }
 
     p {
       font-size: $desktopH6;
+      padding-bottom: $spc32;
+      margin: 0;
     }
 
     button {
       font-size: 28px;
+      margin-top: 50px;
     }
   }
 
@@ -301,6 +317,7 @@ onMounted(() => {
     flex-wrap: wrap;
     width: 60%;
     justify-content: center;
+    align-self: center;
 
     .cactusImage {
       background-image: url('../assets/cactusHighRes.png');
@@ -383,8 +400,8 @@ onMounted(() => {
         z-index: 1;
         transform: translateY(50%);
         top: -35%;
-        left: -60%;
-        width: 125%;
+        left: 10%;
+        width: 15.278vw;
         height: 90%;
         border-right: 2px solid $gold600;
       }
@@ -395,8 +412,8 @@ onMounted(() => {
         z-index: 1;
         transform: translateY(-35%);
         top: 75%;
-        left: 3%;
-        width: 70%;
+        left: 4%;
+        width: 84%;
         height: 30%;
         border-bottom: 2px solid $gold600;
       }
