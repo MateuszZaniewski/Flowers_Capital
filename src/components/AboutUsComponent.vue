@@ -288,11 +288,12 @@ onMounted(() => {
   margin: 0 auto;
   justify-content: space-around;
   padding-bottom: 100px;
+  max-width: 1400px;
 
   .aboutUsLeft {
     width: 40%;
     align-self: center;
-    margin: 0 100px 0 20vw;
+    margin: 0 100px 0 5vw;
 
     .aboutUsInfos {
       padding: 0;
