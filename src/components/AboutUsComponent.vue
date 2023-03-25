@@ -287,7 +287,7 @@ onMounted(() => {
   width: 90%;
   margin: 0 auto;
   justify-content: space-around;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
   max-width: 1400px;
 
   .aboutUsLeft {

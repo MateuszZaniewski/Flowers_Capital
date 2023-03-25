@@ -52,7 +52,6 @@ const windowWidth = window.innerWidth;
 
 .shopWrapper {
     position: relative;
-    padding-top: $spc72;
     display: flex;
     max-width: 1400px;
     margin: 0 auto;
@@ -65,7 +64,7 @@ const windowWidth = window.innerWidth;
         width: fit-content;
         position: absolute;
         z-index: 1;
-        top: 10%;
+        top: 0%;
         left: 4%;
         writing-mode: vertical-lr;
         font-size: $mobileH2;
@@ -76,6 +75,7 @@ const windowWidth = window.innerWidth;
         width: 80%;
         margin-right: 32px;
         margin-left: clamp(10px, 20vw, 130px);
+        padding-bottom: $spc36;
 
         h3 {
             font-size: $mobileH3;
@@ -116,6 +116,8 @@ const windowWidth = window.innerWidth;
     width: 90%;
     margin: 0 auto;
     max-width: 1400px;
+    padding-top: 120px;
+    padding-bottom: 160px;
 
     .image {
         background-size: cover;
