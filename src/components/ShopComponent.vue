@@ -124,7 +124,11 @@ const windowWidth = window.innerWidth;
         background-repeat: no-repeat;
         height: 100%;
         width: 100%;
-        opacity: 0.8;
+        opacity: 1;
+
+        &:hover{
+            opacity: 0.8;
+        }
     }
 
     .flex6 {
@@ -186,8 +190,8 @@ const windowWidth = window.innerWidth;
             z-index: 1;
             transform: translateY(-35%);
             top: 65%;
-            left: 10%;
-            width: 100%;
+            left: 105%;
+            width: 5%;
             height: 160%;
             border-right: 2px solid $gold600;
         }
@@ -226,7 +230,7 @@ const windowWidth = window.innerWidth;
             transform: translateY(-35%);
             top: -15%;
             left: -10%;
-            width: 100%;
+            width: 5%;
             height: 165%;
             border-left: 2px solid $gold600;
         }
@@ -236,10 +240,10 @@ const windowWidth = window.innerWidth;
             position: absolute;
             z-index: 1;
             transform: translateY(-50%);
-            top: 30%;
+            top: 77%;
             left: -25%;
             width: 125%;
-            height: 100%;
+            height: 5%;
             border-bottom: 2px solid $gold600;
       
           }

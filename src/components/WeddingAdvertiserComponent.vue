@@ -30,7 +30,8 @@ const windowWidth = window.innerWidth;
 
 
 .mobileAndTabletView {
-
+    padding-bottom: 40px;
+    
     .weddingFoto {
         height: 67.949vw;
         width: 100%;
@@ -58,6 +59,9 @@ const windowWidth = window.innerWidth;
 
 .desktopView {
     padding-bottom: 100px;
+    max-width: 1440px;
+    margin: 0 auto;
+
     .weddingFoto {
         height: 43.571vw;
         width: 100%;
