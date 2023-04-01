@@ -136,6 +136,7 @@ const windowWidth = window.innerWidth;
         align-items: flex-end;
         justify-content: flex-start;
         position: relative;
+        cursor: pointer;
     }
 
     .textstyles {

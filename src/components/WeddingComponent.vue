@@ -102,6 +102,7 @@ const windowWidth = window.innerWidth;
         display: flex;
         max-width: 1400px;
         margin: 0 auto;
+        padding-bottom: 84px;
     
         h2 {
             transform: rotate(180deg);
@@ -272,7 +273,7 @@ const windowWidth = window.innerWidth;
         width: 80%;
         padding-right: 16px;
         margin-left: clamp(10px, 20vw, 130px);
-        padding-bottom: $spc36;
+        padding-bottom: 84px;
         font-size: $mobileBody;
     
         p {
@@ -317,6 +318,9 @@ const windowWidth = window.innerWidth;
 }
 
 .weddingComponentDesktop {
+    padding-bottom: 138px;
+    max-width: 1440px;
+    margin: 0 auto;
     .weddingComponentWrapper {
         position: relative;
         display: flex;

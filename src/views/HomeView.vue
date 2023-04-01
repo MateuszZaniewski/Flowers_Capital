@@ -24,6 +24,7 @@ import FooterComponent from '../components/FooterComponent.vue';
     <ShopComponent/>
     <WeddingAdvertiserComponent/>
     <WeddingComponent/>
+    <HowWeDoItComponent/>
   </div>
 </template>
 
