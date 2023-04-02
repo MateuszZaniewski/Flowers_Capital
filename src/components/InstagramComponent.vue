@@ -3,43 +3,50 @@
 </script>
 
 <template>
-    <div class="instagramWrapper">
-        <div class="instagram__Component">
-            <div class="component--foto o1-1">
-                <div class="foto foto1"></div>
+    <div class="preWrapper">
+        <div class="instagramWrapper">
+            <div class="instagram__Component">
+                <div class="component--foto o1-1">
+                    <div class="foto foto1"></div>
+                </div>
+                <div class="component--foto o2-2">
+                    <div class="foto foto2"></div>
+                </div>
+                <div class="component--foto o3-6">
+                    <div class="foto foto3"></div>
+                </div>
+                <div class="component--foto o4-8">
+                    <div class="foto foto4"></div>
+                </div>
+                <div class="component--foto component--foto5 o5-5">
+                    <div class="foto foto5"></div>
+                </div>
+                <div class="component--foto component--foto6 o6-3">
+                    <div class="foto foto6"></div>
+                </div>
+                <div class="component--foto component--foto7 o7-4">
+                    <div class="foto foto7"></div>
+                </div>
+                <div class="component--foto component--foto8 o8-7">
+                    <div class="foto foto8"></div>
+                </div>
             </div>
-            <div class="component--foto o2-2">
-                <div class="foto foto2"></div>
+            <div class="insagram__linkContainer">
+                <p>Follow us on Instagram</p>
+                <p>@FLOWERSCAPITALNYC</p>
             </div>
-            <div class="component--foto o3-6">
-                <div class="foto foto3"></div>
-            </div>
-            <div class="component--foto o4-8">
-                <div class="foto foto4"></div>
-            </div>
-            <div class="component--foto component--foto5 o5-5">
-                <div class="foto foto5"></div>
-            </div>
-            <div class="component--foto component--foto6 o6-3">
-                <div class="foto foto6"></div>
-            </div>
-            <div class="component--foto component--foto7 o7-4">
-                <div class="foto foto7"></div>
-            </div>
-            <div class="component--foto component--foto8 o8-7">
-                <div class="foto foto8"></div>
-            </div>
-        </div>
-        <div class="insagram__linkContainer">
-            <p>Follow us on Instagram</p>
-            <p>@FLOWERSCAPITALNYC</p>
         </div>
     </div>
+    
 </template>
 
 <style lang="scss">
 
 @import '@/assets/_variables.scss';
+
+.preWrapper {
+    padding-bottom: 40px;
+}
 
 .instagramWrapper {
     position: relative;
@@ -127,6 +134,11 @@
 
 
 @media screen and (min-width: 1024px) {
+
+    .preWrapper {
+        padding-bottom: 100px;
+    }
+
     .instagramWrapper {
         max-width: 1550px;
         margin: 0 auto;
