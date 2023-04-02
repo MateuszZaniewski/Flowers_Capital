@@ -90,17 +90,25 @@
     .blogWrapper {
         display: flex;
         flex-flow: row nowrap;
-        padding-bottom: 172px;
+        padding-bottom: 72px;
+        max-width: 1440px;
+        margin: 0 auto;
 
         .blogSection {
-            width: 50%;
+            position: relative;
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
 
             h2 {
-                font-size: $desktopH3;
+                font-size: $desktopH4;
+                left: 6%;
             }
 
 
             .blogInfos {
+                margin-left: clamp(10px, 20vw, 130px);
+                width: 70%;
 
                 p {
                     font-size: $desktopH6;
@@ -115,10 +123,11 @@
 
         .imageSection {
             width: 50%;
+            
 
 
             .image {
-                
+                margin-right: 10vw;
 
                 div {
                     width: 25.833vw;

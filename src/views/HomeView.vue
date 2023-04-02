@@ -27,6 +27,7 @@ import FooterComponent from '../components/FooterComponent.vue';
     <HowWeDoItComponent/>
     <BlogComponent/>
     <InstagramComponent/>
+    <FooterComponent/>
   </div>
 </template>
 
