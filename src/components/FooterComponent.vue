@@ -10,22 +10,34 @@
         </div>
         <div class="footer__addressWrapper">
             <div class="footer--address">
-                <span class="addressTittle">ADDRESS</span>
+                <span class="footer--tittle">ADDRESS</span>
                 <span class="addressRest">54 Orchid St</span>
                 <span class="addressRest">New York, NY 10032</span>
             </div>
             <div class="footer--contact">
-                <span class="contactTittle">CONTACT US</span>
-                <span class="contactRest">Phone: (212) 236-7842</span>
-                <span class="contactRest">contact@flowerscapital.com</span>
+                <span class="footer--tittle">CONTACT US</span>
+                <span class="addressRest">Phone: (212) 236-7842</span>
+                <span class="addressRest">contact@flowerscapital.com</span>
             </div>
             <div class="footer--follow">
-                <span class="followTittle">FOLLOW US</span>
+                <span class="footer--tittle">FOLLOW US</span>
                 <div class="follow--socials">
-                    <img src="facebook" />
-                    <img src="instagram" />
-                    <img src="pinterest" />
+                    <img src="../assets/facebook.png" />
+                    <img src="../assets/instagram.png" />
+                    <img src="../assets/pinterest.png" />
                 </div>
+            </div>
+        </div>
+        <div class="footer__linksWrapper">
+            <div class="footer__links">
+                <a>ABOUT US</a>
+                <a>GALLERY</a>
+                <a>SHOP</a>
+                <a>BLOG</a>
+                <a>WEDDINGS</a>
+            </div>
+            <div class="footer__image">
+                <div class="image"></div>
             </div>
         </div>
     </div>
@@ -43,8 +55,10 @@
         display: flex;
         flex-flow: column nowrap;
         font-size: $mobileH1;
-        margin-left: 14px;
+        padding-left: 14px;
         padding-bottom: 40px;
+        max-width: 600px;
+        margin: 0 auto;
         
 
         p {
@@ -55,10 +69,21 @@
         
     }
 
+    .footer--tittle {
+                font-size: $mobileH4;
+                padding-bottom: 4px;
+            }
+
     .footer__addressWrapper {
         display: flex;
         flex-flow: column nowrap;
         gap: 40px;
+
+        .addressRest {
+            font-size: $mobileBody;
+            padding-top: 4px;
+            line-height: 27px;
+        }
 
         .footer--address {
             display: flex;
@@ -66,9 +91,65 @@
             justify-content: center;
             align-items: center;
 
-            .addressTittle {
-                font-size: $mobileH4;
-                padding-bottom: 8px;
+        }
+
+        .footer--contact {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer--follow {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+
+            .follow--socials {
+                display: flex;
+                gap: 20px;
+            }
+        }
+    }
+
+    .footer__linksWrapper {
+        margin: 0 auto;
+        padding-top: 40px;
+        position: relative;
+        
+
+        .footer__links {
+            display: flex;
+            flex-flow: row wrap;
+            padding-left: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            
+
+            a {
+                width: 50%;
+                padding-bottom: 20px;
+                font-size: $mobileBody;
+                
+            }
+        }
+
+        .footer__image {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 160px;
+            width: 100px;
+            padding: 0;
+            margin: 0;
+
+            .image {
+                height: 100%;
+                width: 100%;
+                background-image: url('../assets/slice1.png');
+                background-repeat: no-repeat;
+                background-size: cover;
             }
         }
     }
