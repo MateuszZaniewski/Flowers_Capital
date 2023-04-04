@@ -155,4 +155,127 @@
     }
 }
 
+
+@media screen and (min-width: 1024px) {
+    
+    .footerComponentWrapper {
+        max-width: 2000px;
+        margin: 0 auto;
+
+        .footer__logo {
+            padding-left: 40px;
+            padding-bottom: 40px;
+            max-width: auto;
+            margin: 0;
+            font-size: $desktopH3;
+            
+    
+            p {
+               margin: 0;
+               width: fit-content;
+               line-height: 55px;
+            }
+            
+        }
+
+
+        .footer__addressWrapper {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-start;
+            gap: 0px;
+            justify-content: center;
+            padding-bottom: 5.83vw;
+
+            .addressRest {
+                font-size: $desktopH6;
+                padding-top: 4px;
+                line-height: 27px;
+            }
+
+            .footer--address {
+                order: 1;
+            }
+
+            .footer--follow {
+                order: 2;
+                padding-left: 8.125vw;
+                padding-right: 5.625vw;
+            }
+
+            .footer--tittle {
+                font-size: $desktopH5;
+                padding-bottom: 25px;
+            }
+
+
+            .footer--contact {
+                order: 3;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                
+            }
+        }
+
+        .footer__linksWrapper {
+            margin: 0 auto;
+            padding-top: 0px;
+            position: relative;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    z-index: 1;
+                    transform: translateY(-35%);
+                    top: 0%;
+                    width: 100%;
+                    border-top: 2px solid $gold600;
+                }
+            
+    
+            .footer__links {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                gap: 6.111vw;
+                padding-left: 0;
+                padding-top: 13px;
+                padding-bottom: 13px;
+                max-width: 800px;
+                
+    
+                a {
+                    width: 150px;
+                    padding-bottom: 0px;
+                    font-size: $mobileBody;
+                    
+                }
+            }
+    
+            .footer__image {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 23.611vw;
+                width: 12.5vw;
+                padding: 0;
+                margin: 0;
+                z-index: 0;
+    
+                .image {
+                    height: 100%;
+                    width: 100%;
+                    background-image: url('../assets/slice2.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+
+    }
+
+    
+}
 </style>
