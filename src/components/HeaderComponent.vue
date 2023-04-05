@@ -14,7 +14,7 @@ const windowWidth = window.innerWidth
 
 <template>
         <header :style="{ background: !toggled ? '#F9F8F9' : 'transparent'}">
-            <div class="mobileHeader" v-if="windowWidth < 900">
+            <div class="mobileHeader">
                 <div v-if="toggled" class="hamburger" @click="isToggled">
                     <span class="hamburger--bar bartop"></span>
                     <span class="hamburger--bar barmiddle"></span>
@@ -26,7 +26,7 @@ const windowWidth = window.innerWidth
                 </div>
                     <p class="logoText">Flower's Capital</p>
             </div>
-            <div class="desktopHeader" v-if="windowWidth > 901">
+            <div class="desktopHeader">
                 <div class="desktopWrapper">
                     <div class="desktop__spansWrapperLeft flexCenter">
                         <span class="redirect--span">ABOUT US</span>
@@ -159,6 +159,7 @@ const windowWidth = window.innerWidth
 
 
     .desktopHeader {
+        display: none;
         width: 95%;
         margin: 0 auto;
         max-width: 2000px;
@@ -258,5 +259,16 @@ const windowWidth = window.innerWidth
             }
         }
     }
+
+
+@media screen and (min-width: 1024px) {
+    .mobileHeader {
+        display: none;
+    }
+
+    .desktopHeader {
+        display: block;
+    }
+}
 
 </style>

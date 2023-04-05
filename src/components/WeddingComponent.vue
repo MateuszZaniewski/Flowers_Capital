@@ -1,9 +1,9 @@
 <script setup>
-const windowWidth = window.innerWidth;
+
 </script>
 
 <template>
-    <section class="weddingComponentMobile" v-if="windowWidth < 1024">
+    <section class="weddingComponentMobile">
         <div class="weddingComponentWrapper">
             <h2>Weddings</h2> 
             <div class="weddingInfos">
@@ -44,7 +44,7 @@ const windowWidth = window.innerWidth;
     </section>
     
 
-    <section class="weddingComponentDesktop" v-if="windowWidth >= 1024">
+    <section class="weddingComponentDesktop">
         <div class="weddingComponentWrapper">
             <h2>Weddings</h2> 
             <div class="weddingInfos">
@@ -318,231 +318,65 @@ const windowWidth = window.innerWidth;
 }
 
 .weddingComponentDesktop {
-    padding-bottom: 138px;
-    max-width: 1440px;
-    margin: 0 auto;
-    .weddingComponentWrapper {
-        position: relative;
-        display: flex;
-        max-width: 1400px;
-        margin: 0 auto;
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
     
-        h2 {
-            transform: rotate(180deg);
-            white-space: nowrap;
-            color: $gold600;
-            margin: 0;
-            width: fit-content;
-            position: absolute;
-            z-index: 1;
-            top: 0%;
-            left: 4%;
-            writing-mode: vertical-lr;
-            font-size: $mobileH2;
-            
-          }
-    
-    
-        .weddingInfos {
-            width: 80%;
-            margin-right: 32px;
-            margin-left: clamp(10px, 20vw, 130px);
-            padding-bottom: $spc36;
-    
-            h3 {
-                font-size: $desktopH3;
-                line-height: 34px;
-                color: $black900;
-                margin: 0;
-                padding-bottom: 40px;
-    
-            }
-    
-            p {
-                font-size: $desktopH6;
-                line-height: 27.6px;
-                color: $black900;
-                margin: 0;
-                padding-bottom: 20px;
-                width: 60%;
-            }
-    
-            button {
-                padding: 15px 40px 15px 40px;
-                background: $gold600;
-                font-size: $mobileH4;
-                border-radius: 40px;
-                color: $white100;
-                border: none;
-                line-height: 27.6px;
-                margin-top: 13px;
-            }
-        }
-        
+    .weddingComponentMobile {
+        display: none;
     }
-
-    .weddingFlex {
-        display: flex;
-
-
-        .weddingFlex__left {
-            width: 50%;
-
-            .weddingComponentFotoWrapper {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                margin-left: 16px;
-                margin-right: 16px;
-                padding-bottom: 75px;
-            
-                .wrap1 {
-                    display: flex;
-                    justify-content: flex-end;
-                    
-                }
-            
-                .wrap2 {
-                    padding-left: 20px;
-                    padding-bottom: 20px;
-                }
-            
-                .wrap3 {
-                    padding-top: 20px;
-                    display: flex;
-                    justify-content: flex-end;
-                }
-            
-                .wrap4 {
-                    padding-left: 20px;
-                }
-            
-            
-                .fotoWrapper {
-                    display: flex;
-                    width: 50%;
-            
-            
-                    .foto1 {
-                        background-image: url('../assets/foto1.png');
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        width: 16.944vw;
-                        height: 22.5vw;
-                    }
-            
-                    .foto2 {
-                        background-image: url('../assets/foto2.png');
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        width: 12.5vw;
-                        height: 17.639vw;
-                        align-self: flex-end;
-                        position: relative;
-            
-                        &:before {
-                            content: '';
-                            position: absolute;
-                            z-index: 1;
-                            transform: translateY(-35%);
-                            top: -10%;
-                            left: 0%;
-                            width: 125%;
-                            height: 5%;
-                            border-top: 2px solid $gold600;
-                        }
+    .weddingComponentDesktop {
+        display: block;
+        padding-bottom: 138px;
+        max-width: 1440px;
+        margin: 0 auto;
+        .weddingComponentWrapper {
+            position: relative;
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+        
+            h2 {
+                transform: rotate(180deg);
+                white-space: nowrap;
+                color: $gold600;
+                margin: 0;
+                width: fit-content;
+                position: absolute;
+                z-index: 1;
+                top: 0%;
+                left: 4%;
+                writing-mode: vertical-lr;
+                font-size: $mobileH2;
                 
-                    }
-            
-                    .foto3 {
-                        background-image: url('../assets/foto3.png');
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        width: 12.5vw;
-                        height: 17.639vw;
-                        position: relative;
-            
-                        &:before {
-                            content: '';
-                            position: absolute;
-                            z-index: 1;
-                            transform: translateY(-35%);
-                            top: 45%;
-                            left: -15%;
-                            width: 100%;
-                            height: 125%;
-                            border-left: 2px solid $gold600;
-                        }
-                
-                        &:after{
-                            content: '';
-                            position: absolute;
-                            z-index: 1;
-                            transform: translateY(-50%);
-                            top: 110%;
-                            left: -25%;
-                            width: 125%;
-                            height: 5%;
-                            border-bottom: 2px solid $gold600;
-                      
-                          }
-                    }
-            
-                    .foto4 {
-                        background-image: url('../assets/foto4.png');
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        width: 16.944vw;
-                        height: 22.5vw;
-                    }
-                }
-            
-            }
-        }
-
-        .weddingFlex__right {
-            width: 50%;
-
-            .weddingListWrapper {
+              }
+        
+        
+            .weddingInfos {
                 width: 80%;
-                margin: 0 auto;
-                padding-right: 16px;
+                margin-right: 32px;
+                margin-left: clamp(10px, 20vw, 130px);
                 padding-bottom: $spc36;
-                font-size: $desktopH6;
-            
+        
+                h3 {
+                    font-size: $desktopH3;
+                    line-height: 34px;
+                    color: $black900;
+                    margin: 0;
+                    padding-bottom: 40px;
+        
+                }
+        
                 p {
+                    font-size: $desktopH6;
+                    line-height: 27.6px;
+                    color: $black900;
                     margin: 0;
-                    padding-bottom: 23px;
+                    padding-bottom: 20px;
+                    width: 60%;
                 }
-
-                .weddingMore {
-                    padding-top: 15px;
-                    padding-bottom: 25px;
-                }
-            
-                ul {
-                    list-style: none;
-                    padding-bottom: 15px;
-                    margin: 0;
-            
-                    li {
-                        line-height: 27px;
-                        padding-bottom: 10px;
-            
-                        &:before {
-                            content: "\2022";
-                            color: $gold600;
-                            font-size: 25px;
-                            display: inline-block; 
-                            width: 20px;
-                            
-            
-            
-                        }
-                    }
-                }
-            
-            
+        
                 button {
                     padding: 15px 40px 15px 40px;
                     background: $gold600;
@@ -553,11 +387,191 @@ const windowWidth = window.innerWidth;
                     line-height: 27.6px;
                     margin-top: 13px;
                 }
+            }
             
+        }
+    
+        .weddingFlex {
+            display: flex;
+    
+    
+            .weddingFlex__left {
+                width: 50%;
+    
+                .weddingComponentFotoWrapper {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-left: 16px;
+                    margin-right: 16px;
+                    padding-bottom: 75px;
+                
+                    .wrap1 {
+                        display: flex;
+                        justify-content: flex-end;
+                        
+                    }
+                
+                    .wrap2 {
+                        padding-left: 20px;
+                        padding-bottom: 20px;
+                    }
+                
+                    .wrap3 {
+                        padding-top: 20px;
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                
+                    .wrap4 {
+                        padding-left: 20px;
+                    }
+                
+                
+                    .fotoWrapper {
+                        display: flex;
+                        width: 50%;
+                
+                
+                        .foto1 {
+                            background-image: url('../assets/foto1.png');
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            width: 16.944vw;
+                            height: 22.5vw;
+                        }
+                
+                        .foto2 {
+                            background-image: url('../assets/foto2.png');
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            width: 12.5vw;
+                            height: 17.639vw;
+                            align-self: flex-end;
+                            position: relative;
+                
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                z-index: 1;
+                                transform: translateY(-35%);
+                                top: -10%;
+                                left: 0%;
+                                width: 125%;
+                                height: 5%;
+                                border-top: 2px solid $gold600;
+                            }
+                    
+                        }
+                
+                        .foto3 {
+                            background-image: url('../assets/foto3.png');
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            width: 12.5vw;
+                            height: 17.639vw;
+                            position: relative;
+                
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                z-index: 1;
+                                transform: translateY(-35%);
+                                top: 45%;
+                                left: -15%;
+                                width: 100%;
+                                height: 125%;
+                                border-left: 2px solid $gold600;
+                            }
+                    
+                            &:after{
+                                content: '';
+                                position: absolute;
+                                z-index: 1;
+                                transform: translateY(-50%);
+                                top: 110%;
+                                left: -25%;
+                                width: 125%;
+                                height: 5%;
+                                border-bottom: 2px solid $gold600;
+                          
+                              }
+                        }
+                
+                        .foto4 {
+                            background-image: url('../assets/foto4.png');
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            width: 16.944vw;
+                            height: 22.5vw;
+                        }
+                    }
+                
+                }
+            }
+    
+            .weddingFlex__right {
+                width: 50%;
+    
+                .weddingListWrapper {
+                    width: 80%;
+                    margin: 0 auto;
+                    padding-right: 16px;
+                    padding-bottom: $spc36;
+                    font-size: $desktopH6;
+                
+                    p {
+                        margin: 0;
+                        padding-bottom: 23px;
+                    }
+    
+                    .weddingMore {
+                        padding-top: 15px;
+                        padding-bottom: 25px;
+                    }
+                
+                    ul {
+                        list-style: none;
+                        padding-bottom: 15px;
+                        margin: 0;
+                
+                        li {
+                            line-height: 27px;
+                            padding-bottom: 10px;
+                
+                            &:before {
+                                content: "\2022";
+                                color: $gold600;
+                                font-size: 25px;
+                                display: inline-block; 
+                                width: 20px;
+                                
+                
+                
+                            }
+                        }
+                    }
+                
+                
+                    button {
+                        padding: 15px 40px 15px 40px;
+                        background: $gold600;
+                        font-size: $mobileH4;
+                        border-radius: 40px;
+                        color: $white100;
+                        border: none;
+                        line-height: 27.6px;
+                        margin-top: 13px;
+                    }
+                
+                }
             }
         }
     }
+
 }
+
+
 
 
 </style>

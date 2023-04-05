@@ -9,10 +9,10 @@ const windowWidth = window.innerWidth;
             <h3>We offer convenient online ordering and delivery services.</h3>
             <p>You can choose from indoor plants, forever green suculents, colorful wreaths and flower crowns, stunning flower boxes, already made bouquets or fresh flowers to make your own composition.</p>
             <p>Discover our offer, select your desired flowers or plants, and we'll take care of the rest.</p>
-            <button v-if="windowWidth < 1024">Go to our shop</button>
+            <button>Go to our shop</button>
         </div>
     </div>
-    <div class="shop__categories" v-if="windowWidth >= 1024">
+    <div class="shop__categories">
         <div class="indoorplantsWrapper flex6"> 
             <div class="indoorplants__image image">
                 <div class="indoorplants--text textstyles">Indoor plants</div>
@@ -109,190 +109,210 @@ const windowWidth = window.innerWidth;
 }
 
 .shop__categories {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-flow: row wrap;
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1400px;
-    padding-top: 120px;
-    padding-bottom: 160px;
-
-    .image {
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100%;
-        width: 100%;
-        opacity: 1;
-
-        &:hover{
-            opacity: 0.8;
-        }
-    }
-
-    .flex6 {
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-start;
-        position: relative;
-        cursor: pointer;
-    }
-
-    .textstyles {
-        color: $gold600;
-        font-size: 32px;
-        line-height: 38.4px;
-        text-align: center;
-        background-color: $white100;
-        position: absolute;
-        width: fit-content;
-        width: 100%;
-        
-    }
-
-    .indoorplantsWrapper {
-            
-
-            .indoorplants__image {
-                background-image: url('../assets/indoor__plants.png');
-                border-radius: 225px 225px 0 0;
-                height: 30vw;
-                width: 22.569vw;
-
-                .indoorplants--text {
-                    top: 60%;
-                }
-
-            }
-        
-    }
-    .freshflowersWrapper {
-
-
-        align-items: flex-start;
-            .freshflowers__image {
-                background-image: url('../assets/fresh__flowers.png');
-                height: 31.25vw;
-                width: 22.569vw;
-
-                .freshflowers--text {
-                    top: 45%;
-                }
-            }
-
-         }
-    .flowerboxesWrapper {
-        position: relative;
-
-        &:before {
-            content: '';
-            position: absolute;
-            z-index: 1;
-            transform: translateY(-35%);
-            top: 65%;
-            left: 105%;
-            width: 5%;
-            height: 160%;
-            border-right: 2px solid $gold600;
-        }
-
-        &:after{
-            content: '';
-            position: absolute;
-            z-index: 1;
-            transform: translateY(-50%);
-            top: 15%;
-            left: 0%;
-            width: 125%;
-            height: 10%;
-            border-bottom: 2px solid $gold600;
-      
-          }
-
-            .flowerboxes__image{
-                background-image: url('../assets/flower__boxes.png');
-                height: 22.569vw;
-                width: 22.569vw;
-
-                .flowerboxes--text {
-                    top: 60%
-                }
-            }
-         
-         }
-    .wreathsWrapper {
-        position: relative;
-
-        &:before {
-            content: '';
-            position: absolute;
-            z-index: 1;
-            transform: translateY(-35%);
-            top: -15%;
-            left: -10%;
-            width: 5%;
-            height: 165%;
-            border-left: 2px solid $gold600;
-        }
-
-        &:after{
-            content: '';
-            position: absolute;
-            z-index: 1;
-            transform: translateY(-50%);
-            top: 77%;
-            left: -25%;
-            width: 125%;
-            height: 5%;
-            border-bottom: 2px solid $gold600;
-      
-          }
-
-        align-items: flex-start;
-            .wreaths__image{
-                background-image: url('../assets/wreaths.png');
-                height: 22.569vw;
-                width: 22.569vw;
-
-                .wreaths--text {
-                    top: 32%;
-                }
-            }
-
-         }
-    .suculentsWrapper {
-
-
-        align-items: flex-start;
-            .suculents__image{
-                background-image: url('../assets/suculents.png');
-                height: 31.25vw;
-                width: 22.569vw;
-
-                .suculents--text {
-                    top: 48%;
-                }
-            }
-         
-         }
-    .buqietsWrapper {
-
-
-        align-items: flex-start;
-            .buqiets__image{
-                background-image: url('../assets/buqiets.png');
-                border-radius: 0 0 225px 225px;
-                height: 30vw;
-                width: 22.569vw;
-
-                .buqiets--text {
-                    top: 32%;
-                }
-            }
-
-         }
+    display: none;
 }
 
+
+@media screen and (min-width: 1024px) {
+    .shopWrapper {
+
+        .shopInfos {
+
+            button {
+                display: none;
+            }
+        }
+    
+    }
+    
+    
+
+    .shop__categories {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-flow: row wrap;
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1400px;
+        padding-top: 120px;
+        padding-bottom: 160px;
+    
+        .image {
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            opacity: 1;
+    
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+    
+        .flex6 {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            position: relative;
+            cursor: pointer;
+        }
+    
+        .textstyles {
+            color: $gold600;
+            font-size: 32px;
+            line-height: 38.4px;
+            text-align: center;
+            background-color: $white100;
+            position: absolute;
+            width: fit-content;
+            width: 100%;
+            
+        }
+    
+        .indoorplantsWrapper {
+                
+    
+                .indoorplants__image {
+                    background-image: url('../assets/indoor__plants.png');
+                    border-radius: 225px 225px 0 0;
+                    height: 30vw;
+                    width: 22.569vw;
+    
+                    .indoorplants--text {
+                        top: 60%;
+                    }
+    
+                }
+            
+        }
+        .freshflowersWrapper {
+    
+    
+            align-items: flex-start;
+                .freshflowers__image {
+                    background-image: url('../assets/fresh__flowers.png');
+                    height: 31.25vw;
+                    width: 22.569vw;
+    
+                    .freshflowers--text {
+                        top: 45%;
+                    }
+                }
+    
+             }
+        .flowerboxesWrapper {
+            position: relative;
+    
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                transform: translateY(-35%);
+                top: 65%;
+                left: 105%;
+                width: 5%;
+                height: 160%;
+                border-right: 2px solid $gold600;
+            }
+    
+            &:after{
+                content: '';
+                position: absolute;
+                z-index: 1;
+                transform: translateY(-50%);
+                top: 15%;
+                left: 0%;
+                width: 125%;
+                height: 10%;
+                border-bottom: 2px solid $gold600;
+          
+              }
+    
+                .flowerboxes__image{
+                    background-image: url('../assets/flower__boxes.png');
+                    height: 22.569vw;
+                    width: 22.569vw;
+    
+                    .flowerboxes--text {
+                        top: 60%
+                    }
+                }
+             
+             }
+        .wreathsWrapper {
+            position: relative;
+    
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                transform: translateY(-35%);
+                top: -15%;
+                left: -10%;
+                width: 5%;
+                height: 165%;
+                border-left: 2px solid $gold600;
+            }
+    
+            &:after{
+                content: '';
+                position: absolute;
+                z-index: 1;
+                transform: translateY(-50%);
+                top: 77%;
+                left: -25%;
+                width: 125%;
+                height: 5%;
+                border-bottom: 2px solid $gold600;
+          
+              }
+    
+            align-items: flex-start;
+                .wreaths__image{
+                    background-image: url('../assets/wreaths.png');
+                    height: 22.569vw;
+                    width: 22.569vw;
+    
+                    .wreaths--text {
+                        top: 32%;
+                    }
+                }
+    
+             }
+        .suculentsWrapper {
+    
+    
+            align-items: flex-start;
+                .suculents__image{
+                    background-image: url('../assets/suculents.png');
+                    height: 31.25vw;
+                    width: 22.569vw;
+    
+                    .suculents--text {
+                        top: 48%;
+                    }
+                }
+             
+             }
+        .buqietsWrapper {
+    
+    
+            align-items: flex-start;
+                .buqiets__image{
+                    background-image: url('../assets/buqiets.png');
+                    border-radius: 0 0 225px 225px;
+                    height: 30vw;
+                    width: 22.569vw;
+    
+                    .buqiets--text {
+                        top: 32%;
+                    }
+                }
+    
+             }
+
+    }
+}
 
 </style>

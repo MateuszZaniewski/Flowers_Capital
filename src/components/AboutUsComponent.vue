@@ -33,7 +33,7 @@ onMounted(() => {
     </div>
   </section>
 
-  <div class="AboutUsMobileWrapper" v-if="windowWidth < 1024">
+  <div class="AboutUsMobileWrapper">
       <div class="aboutUsNext">
         <div class="doniczkaImage__wrapper">
           <div class="doniczkaImage"></div>
@@ -43,36 +43,40 @@ onMounted(() => {
         </div>
       </div>
     </div>
-
-  <div class="aboutUsInfos"  v-if="windowWidth < 1024">
-      <p>We pride ourselves on the wide variety of fresh flowers and plants that we offer.</p>
-      <p>Whether you're looking for a beautiful bouquet of roses for a special occasion, or a lush green plant to liven up your home or office, we have something to suit everyone's taste and budget.</p>
-      <button>Learn more</button>
-    </div>
-
-    <div class="AboutUsDesktopWrapper" v-if="windowWidth >= 1024">
-      <div class="aboutUsLeft">
-        <div class="aboutUsInfos">
-          <p>We pride ourselves on the wide variety of fresh flowers and plants that we offer.</p>
-          <p>Whether you're looking for a beautiful bouquet of roses for a special occasion, or a lush green plant to liven up your home or office, we have something to suit everyone's taste and budget.</p>
-          <button>Learn more</button>
+  
+    <div class="elko">
+      <div class="aboutUsInfos dekstopHide">
+        <p>We pride ourselves on the wide variety of fresh flowers and plants that we offer.</p>
+        <p>Whether you're looking for a beautiful bouquet of roses for a special occasion, or a lush green plant to liven up your home or office, we have something to suit everyone's taste and budget.</p>
+        <button>Learn more</button>
+      </div>
+  
+      <div class="AboutUsDesktopWrapper">
+        <div class="aboutUsLeft">
+          <div class="aboutUsInfos">
+            <p>We pride ourselves on the wide variety of fresh flowers and plants that we offer.</p>
+            <p>Whether you're looking for a beautiful bouquet of roses for a special occasion, or a lush green plant to liven up your home or office, we have something to suit everyone's taste and budget.</p>
+            <button>Learn more</button>
+          </div>
+        </div>
+        <div class="aboutUsRight">
+          <div class="cactusImageWrapper">
+            <div class="cactusImage"></div>
+          </div>
+          <div class="bukietImageWrapper">
+            <div class="bukietImage"></div>
+          </div>
+          <div class="flowersImageWrapper">
+            <div class="flowersImage"></div>
+          </div>
+          <div class="doniczkaImageWrapper">
+            <div class="doniczkaImage"></div>
+          </div>
         </div>
       </div>
-      <div class="aboutUsRight">
-        <div class="cactusImageWrapper">
-          <div class="cactusImage"></div>
-        </div>
-        <div class="bukietImageWrapper">
-          <div class="bukietImage"></div>
-        </div>
-        <div class="flowersImageWrapper">
-          <div class="flowersImage"></div>
-        </div>
-        <div class="doniczkaImageWrapper">
-          <div class="doniczkaImage"></div>
-        </div>
-      </div>
     </div>
+
+  
 
 </template>
 
@@ -422,6 +426,9 @@ onMounted(() => {
   }
 }
 
+.AboutUsDesktopWrapper {
+  display: none;
+}
 
 
 
@@ -445,6 +452,22 @@ onMounted(() => {
 
 
 @media screen and (min-width: 1024px) {
+
+  .AboutUsMobileWrapper {
+    display: none;
+  }
+
+  .AboutUsDesktopWrapper {
+    display: flex;
+  }
+  
+
+  .elko {
+
+    .dekstopHide {
+      display: none;
+    }
+  }
   
   .aboutUswrapper {
     display: flex;

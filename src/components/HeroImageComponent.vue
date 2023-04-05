@@ -70,7 +70,7 @@ main {
     padding-bottom: $spc32;
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
 
     main {
         background: $white100;

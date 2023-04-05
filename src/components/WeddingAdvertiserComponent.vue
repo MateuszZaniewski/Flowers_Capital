@@ -1,9 +1,9 @@
 <script setup>
-const windowWidth = window.innerWidth;
+
 </script>
 
 <template>
-    <div class="mobileAndTabletView" v-if="windowWidth < 1024">
+    <div class="mobileAndTabletView">
         <div class="weddingWrapper">
             <div class="weddingFoto"></div>
             <div class="weddingText">
@@ -11,7 +11,7 @@ const windowWidth = window.innerWidth;
             </div>
         </div>
     </div>
-    <div class="desktopView" v-if="windowWidth >= 1024">
+    <div class="desktopView">
         <div class="weddingWrapper">
             <div class="weddingFoto">
                 <div class="weddingText">
@@ -24,10 +24,13 @@ const windowWidth = window.innerWidth;
     
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 
 @import '@/assets/_variables.scss';
 
+.desktopView {
+    display: none;
+}
 
 .mobileAndTabletView {
     padding-bottom: 40px;
@@ -57,48 +60,58 @@ const windowWidth = window.innerWidth;
 
 }
 
-.desktopView {
-    padding-bottom: 100px;
-    max-width: 1440px;
-    margin: 0 auto;
+@media screen and (min-width: 1024px) {
 
-    .weddingFoto {
-        height: 43.571vw;
-        width: 100%;
-        position: relative;
+    .mobileAndTabletView {
+        display: none;
+    }
 
-        &:before{
-            content: "";
-            background-image: url('../assets/weddingfullwidthDesktop.png');
-            background-size: cover;
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-        }
-
-        .weddingText {
-
-            h3 {
-                font-size: $desktopH1;
-                color: $gold600;
-                line-height: 85.14px;
-                margin: 0;
+    .desktopView {
+        display: block;
+        padding-bottom: 100px;
+        max-width: 1440px;
+        margin: 0 auto;
+    
+        .weddingFoto {
+            height: 43.571vw;
+            width: 100%;
+            position: relative;
+    
+            &:before{
+                content: "";
+                background-image: url('../assets/weddingfullwidthDesktop.png');
+                background-size: cover;
                 position: absolute;
-                bottom: 30px;
-                z-index: 100;
-                text-align: center;
-                
-        
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
             }
-
+    
+            .weddingText {
+    
+                h3 {
+                    font-size: $desktopH1;
+                    color: $gold600;
+                    line-height: 85.14px;
+                    margin: 0;
+                    position: absolute;
+                    bottom: 30px;
+                    z-index: 100;
+                    text-align: center;
+                    
+            
+                }
+    
+            }
+    
+            
+    
         }
-
-        
-
     }
 }
+
+
 
 
 
