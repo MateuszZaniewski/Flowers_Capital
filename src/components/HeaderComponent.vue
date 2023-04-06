@@ -197,8 +197,8 @@ const windowWidth = window.innerWidth
         .desktop__logoWrapper {
             justify-content: center;
             text-align: center;
-            padding-left: 11.208vw;
-            padding-right: 11.139vw;
+            padding-left: 6.208vw;
+            padding-right: 6.139vw;
 
         }
 
