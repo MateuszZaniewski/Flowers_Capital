@@ -3,11 +3,9 @@ import { ref, onMounted } from "vue"
 
 const headerWidth = ref(null);
 const divWidth = ref(null);
-const windowWidth = window.innerWidth;
 
 onMounted(() => {
       divWidth.value = headerWidth.value.clientWidth;
-      console.log(divWidth.value)
     });
 
 
@@ -42,7 +40,7 @@ onMounted(() => {
           <div class="bukietImage"></div>
         </div>
       </div>
-    </div>
+  </div>
   
     <div class="elko">
       <div class="aboutUsInfos dekstopHide">
@@ -85,10 +83,7 @@ onMounted(() => {
 @import '@/assets/_variables.scss';
 
 .aboutUswrapper {
-  margin-top: 45px;
   max-width: 800px;
-  z-index: 1;
-
 
   .aboutUsMain {
 
@@ -167,7 +162,7 @@ onMounted(() => {
 .aboutUsInfos{
   margin-right: 32px;
   position: relative;
-  padding-bottom: $spc32;
+  margin-bottom: $spc32;
   margin-left: clamp(10px, 20vw, 130px);
 
   h3 {
@@ -188,11 +183,12 @@ onMounted(() => {
   button {
     padding: 15px 40px 15px 40px;
     background: $gold600;
-    font-size: $mobileH4;
+    font-size: $mobileBody;
     border-radius: 40px;
     color: $white100;
     border: none;
     line-height: 27.6px;
+    margin-bottom: 18.462vw;
   }
 
   button:hover {
@@ -471,7 +467,7 @@ onMounted(() => {
   
 
   .elko {
-
+    
     .dekstopHide {
       display: none;
     }

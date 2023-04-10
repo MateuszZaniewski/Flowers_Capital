@@ -120,7 +120,7 @@
 
         p {
             color: $white100;
-            font-size: $mobileH4;
+            font-size: $mobileBody;
             text-align: center;
             margin: 0;
         }

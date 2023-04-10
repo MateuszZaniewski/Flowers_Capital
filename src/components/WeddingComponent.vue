@@ -102,7 +102,7 @@
         display: flex;
         max-width: 1400px;
         margin: 0 auto;
-        padding-bottom: 84px;
+        padding-bottom: 0px;
     
         h2 {
             transform: rotate(180deg);
@@ -146,7 +146,7 @@
             button {
                 padding: 15px 40px 15px 40px;
                 background: $gold600;
-                font-size: $mobileH4;
+                font-size: $mobileBody;
                 border-radius: 40px;
                 color: $white100;
                 border: none;
@@ -165,7 +165,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-left: 16px;
+
         margin-right: 16px;
         padding-bottom: 75px;
     
@@ -310,7 +310,7 @@
         button {
             padding: 15px 40px 15px 40px;
             background: $gold600;
-            font-size: $mobileH4;
+            font-size: $mobileBody;
             border-radius: 40px;
             color: $white100;
             border: none;
@@ -388,7 +388,7 @@
                 button {
                     padding: 15px 40px 15px 40px;
                     background: $gold600;
-                    font-size: $mobileH4;
+                    font-size: $mobileBody;
                     border-radius: 40px;
                     color: $white100;
                     border: none;
@@ -568,7 +568,7 @@
                     button {
                         padding: 15px 40px 15px 40px;
                         background: $gold600;
-                        font-size: $mobileH4;
+                        font-size: $mobileBody;
                         border-radius: 40px;
                         color: $white100;
                         border: none;

@@ -1,5 +1,11 @@
 <script setup>
 
+const scrollDown = () => {
+  let scrollPosition = 0
+  const heightOfScreen = window.innerHeight
+  scrollPosition += heightOfScreen
+  window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+};
 </script>
 
 <template>
@@ -13,7 +19,7 @@
             </div>
         </div>
         <div class="downWrapper">
-            <img src="../assets/downPage.png" />
+            <img src="../assets/downPage.png"  @click="scrollDown()"/>
         </div>
     </main>
 </template>
@@ -42,7 +48,7 @@
         
 
         .heroImage__image {
-            background-image: url('../assets/slice3.png');
+            background-image: url('../assets/mobileSlice.png');
             background-repeat: no-repeat;
             background-size: cover;
             height: 126.41vw;
@@ -57,7 +63,18 @@
 .downWrapper {
         display: flex;
         justify-content: center;
-        padding-bottom: 95px;
+        padding-top: 11.282vh;
+        padding-bottom: 24.615vw;
+}
+
+@media screen and (min-width: 500px) and (max-width: 1023px) {
+    .downWrapper {
+        display: none;
+    }
+
+    .heroImageComponentWrapper {
+        padding-bottom: 150px;
+    }
 }
 
 

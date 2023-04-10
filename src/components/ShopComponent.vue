@@ -97,7 +97,7 @@ const windowWidth = window.innerWidth;
         button {
             padding: 15px 40px 15px 40px;
             background: $gold600;
-            font-size: $mobileH4;
+            font-size: $mobileBody;
             border-radius: 40px;
             color: $white100;
             border: none;

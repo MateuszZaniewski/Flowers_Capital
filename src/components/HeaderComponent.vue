@@ -21,7 +21,7 @@ function isToggled() {
                     <span class="hamburger--x x-one"></span>
                     <span class="hamburger--x x-two"></span>
                 </div>
-                    <p class="logoText">Flower's Capital</p>
+                    <p class="logoText">Flowers'Capital</p>
             </div>
             <div class="desktopHeader">
                 <div class="desktopWrapper">
@@ -31,7 +31,7 @@ function isToggled() {
                         <span class="redirect--span">WEEDINGS</span>
                     </div>
                     <div class="desktop__logoWrapper flexCenter">
-                        <span class="logo--span">Flowers's Capital</span>
+                        <span class="logo--span">Flowers'Capital</span>
                     </div>
                     <div class="desktop__spansWrapperRight flexCenter">
                         <span class="redirect--span">BLOG</span>

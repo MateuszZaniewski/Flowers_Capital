@@ -57,6 +57,7 @@
         font-size: $mobileH1;
         padding-left: 14px;
         padding-bottom: 40px;
+        padding-top: 36px;
         max-width: 600px;
         margin: 0 auto;
         
@@ -108,6 +109,7 @@
 
             .follow--socials {
                 display: flex;
+                padding-top: 1vh;
                 gap: 20px;
 
                 #facebook:hover{
@@ -159,7 +161,7 @@
             .image {
                 height: 100%;
                 width: 100%;
-                background-image: url('../assets/slice1.png');
+                background-image: url('../assets/footerImage.png');
                 background-repeat: no-repeat;
                 background-size: cover;
             }
@@ -292,7 +294,7 @@
                 .image {
                     height: 100%;
                     width: 100%;
-                    background-image: url('../assets/slice2.png');
+                    background-image: url('../assets/footerDesktop.png');
                     background-repeat: no-repeat;
                     background-size: cover;
                 }

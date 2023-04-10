@@ -47,6 +47,8 @@
     
         text-align: center;
         padding-top: 16px;
+        max-width: 760px;
+        margin: 0 auto;
     
         h3 {
             font-size: $mobileH1;
@@ -89,7 +91,7 @@
             }
     
             .weddingText {
-    
+                
                 h3 {
                     font-size: $desktopH1;
                     color: $gold600;
