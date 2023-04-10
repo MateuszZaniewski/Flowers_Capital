@@ -22,9 +22,9 @@
             <div class="footer--follow">
                 <span class="footer--tittle">FOLLOW US</span>
                 <div class="follow--socials">
-                    <img src="../assets/facebook.png" />
-                    <img src="../assets/instagram.png" />
-                    <img src="../assets/pinterest.png" />
+                    <img id="facebook" src="../assets/facebook.png" />
+                    <img id="instagram" src="../assets/instagram.png" />
+                    <img id="pinterest" src="../assets/pinterest.png" />
                 </div>
             </div>
         </div>
@@ -109,6 +109,18 @@
             .follow--socials {
                 display: flex;
                 gap: 20px;
+
+                #facebook:hover{
+                    content: url('../assets/facebookHover.png');
+                }
+
+                #instagram:hover{
+                    content: url('../assets/instagramHover.png');
+                }
+
+                #pinterest:hover{
+                    content: url('../assets/pinterestHover.png');
+                }
             }
         }
     }
@@ -247,11 +259,24 @@
                 
     
                 a {
-                    width: 150px;
+                    width: fit-content;
                     padding-bottom: 0px;
                     font-size: $mobileBody;
-                    
+                    cursor: pointer;
                 }
+
+                a:after {
+                    display:block;
+                    content: '';
+                    border-bottom: solid 1px $gold600;  
+                    transform: scaleX(0);  
+                    transition: transform 250ms ease-in-out;
+                    }
+        
+                a:hover:after {
+                    transform: scaleX(1)
+                }
+
             }
     
             .footer__image {

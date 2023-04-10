@@ -36,7 +36,7 @@ import FooterComponent from '../components/FooterComponent.vue';
 @import '@/assets/_variables.scss';
 
 .HomeViewwrapper {
-  background: $white100;
+  background: #F7F8FA;
 }
 
 </style>

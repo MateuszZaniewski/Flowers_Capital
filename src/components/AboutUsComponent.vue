@@ -194,6 +194,10 @@ onMounted(() => {
     border: none;
     line-height: 27.6px;
   }
+
+  button:hover {
+    background: $gold700;
+  }
 }
 
 .AboutUsMobileWrapper {
@@ -314,6 +318,10 @@ onMounted(() => {
     button {
       font-size: 28px;
       margin-top: 50px;
+    }
+
+    button:hover {
+      background: $gold700;
     }
   }
 

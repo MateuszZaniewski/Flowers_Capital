@@ -6,10 +6,7 @@ let toggled = ref(true)
 function isToggled() {
     toggled.value = !toggled.value
     console.log(toggled.value)
-}
-
-const windowWidth = window.innerWidth
-
+}   
 </script>
 
 <template>
@@ -41,8 +38,8 @@ const windowWidth = window.innerWidth
                         <span class="redirect--span">CONTACT</span>
                     </div>
                     <div class="desktop__icons flexCenter">
-                        <img src="../assets/shopping.png" />
-                        <img src="../assets/user.png" />
+                        <img id="shopping" src="../assets/shopping.png" />
+                        <img id="user" src="../assets/user.png" />
                     </div>
                 </div>
             </div>
@@ -167,6 +164,8 @@ const windowWidth = window.innerWidth
     }
     .desktopWrapper {
         display: flex;
+        position: relative;
+        z-index: 999;
         justify-content: space-evenly;
         max-width: 2000px;
         margin: 0 auto;
@@ -175,9 +174,25 @@ const windowWidth = window.innerWidth
             gap: 4.097vw;
         }
 
+        .redirect--span {
+            cursor: pointer;
+        }
+
+        .redirect--span:after {
+            display:block;
+            content: '';
+            border-bottom: solid 1px $gold600;  
+            transform: scaleX(0);  
+            transition: transform 250ms ease-in-out;
+            }
+
+        .redirect--span:hover:after {
+            transform: scaleX(1)
+        }
+
         .desktop__spansWrapperRight{
             gap: 4.236vw;
-            padding-right: 2.444vw;
+            padding-right: 2.300vw;
         }
 
         .desktop__icons {
@@ -187,6 +202,7 @@ const windowWidth = window.innerWidth
         .flexCenter{
             display: flex;
             align-items: center;
+            
         }
 
         span {
@@ -214,10 +230,11 @@ const windowWidth = window.innerWidth
 
     .dropdown{
         position: absolute;
+        height: 100vh;
         top: 49px;
         font-size: $mobileH4;
         padding-left: 16px;
-        background: $white100;
+        background: #F7F8FA;
         width: 100%;
         display: none;
         z-index: 99;
@@ -227,7 +244,7 @@ const windowWidth = window.innerWidth
         &__links{
             display: flex;
             flex-flow: column nowrap;
-            padding-top: 2.571vh;
+            padding-top: 6.571vh;
             
             span {
                 padding-bottom: 1.286vh;
@@ -268,6 +285,18 @@ const windowWidth = window.innerWidth
 
     .desktopHeader {
         display: block;
+
+        .desktop__icons {
+            gap: 1.806vw;
+
+            #shopping:hover {
+                content: url('../assets/shoppingHover.png');
+            }
+
+            #user:hover {
+                content: url('../assets/userHover.png');
+            }
+        }
     }
 }
 

@@ -82,6 +82,10 @@
             line-height: 27.6px;
             margin-top: 20px;
         }
+
+        button:hover {
+            background: $gold700;
+          }
     }
     
 }

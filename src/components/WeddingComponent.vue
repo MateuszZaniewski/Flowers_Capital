@@ -153,6 +153,10 @@
                 line-height: 27.6px;
                 margin-top: 13px;
             }
+
+            button:hover {
+                background: $gold700;
+              }
         }
         
     }
@@ -313,6 +317,10 @@
             line-height: 27.6px;
             margin-top: 13px;
         }
+
+        button:hover {
+            background: $gold700;
+          }
     
     }
 }
@@ -387,6 +395,10 @@
                     line-height: 27.6px;
                     margin-top: 13px;
                 }
+
+                button:hover {
+                    background: $gold700;
+                  }
             }
             
         }
@@ -563,6 +575,10 @@
                         line-height: 27.6px;
                         margin-top: 13px;
                     }
+
+                    button:hover {
+                        background: $gold700;
+                      }
                 
                 }
             }

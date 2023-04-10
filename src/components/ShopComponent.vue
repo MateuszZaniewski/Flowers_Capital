@@ -104,6 +104,10 @@ const windowWidth = window.innerWidth;
             line-height: 27.6px;
             margin-top: 13px;
         }
+
+        button:hover {
+            background: $gold700;
+          }
     }
     
 }
