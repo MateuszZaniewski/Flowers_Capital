@@ -95,7 +95,7 @@
         display: flex;
         flex-flow: row nowrap;
         padding-bottom: 72px;
-        max-width: 1440px;
+        max-width: 2000px;
         margin: 0 auto;
 
         .blogSection {
@@ -119,7 +119,7 @@
                 }
 
                 button {
-                    font-size: 28px;
+                    font-size: 25px;
                 }
             }
             

@@ -100,7 +100,7 @@
     .weddingComponentWrapper {
         position: relative;
         display: flex;
-        max-width: 1400px;
+        max-width: 2000px;
         margin: 0 auto;
         padding-bottom: 0px;
     
@@ -337,12 +337,12 @@
     .weddingComponentDesktop {
         display: block;
         padding-bottom: 138px;
-        max-width: 1440px;
+        max-width: 2000px;
         margin: 0 auto;
         .weddingComponentWrapper {
             position: relative;
             display: flex;
-            max-width: 1400px;
+            max-width: 2000px;
             margin: 0 auto;
         
             h2 {
@@ -568,7 +568,7 @@
                     button {
                         padding: 15px 40px 15px 40px;
                         background: $gold600;
-                        font-size: $mobileBody;
+                        font-size: 25px;
                         border-radius: 40px;
                         color: $white100;
                         border: none;

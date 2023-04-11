@@ -71,7 +71,7 @@
     .desktopView {
         display: block;
         padding-bottom: 100px;
-        max-width: 1440px;
+        max-width: 1500px;
         margin: 0 auto;
     
         .weddingFoto {

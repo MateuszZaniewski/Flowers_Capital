@@ -138,7 +138,7 @@ const windowWidth = window.innerWidth;
         flex-flow: row wrap;
         width: 90%;
         margin: 0 auto;
-        max-width: 1400px;
+        max-width: 2000px;
         padding-top: 120px;
         padding-bottom: 160px;
     

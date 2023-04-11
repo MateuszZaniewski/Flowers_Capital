@@ -82,7 +82,7 @@ const scrollDown = () => {
 
     main {
         padding-bottom: 100px;
-        max-width: 1600px;
+        max-width: 2000px;
         margin: 0 auto;
     }
 

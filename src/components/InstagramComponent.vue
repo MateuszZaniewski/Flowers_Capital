@@ -140,7 +140,7 @@
     }
 
     .instagramWrapper {
-        max-width: 1550px;
+        max-width:2000px;
         margin: 0 auto;
     
         .instagram__Component {

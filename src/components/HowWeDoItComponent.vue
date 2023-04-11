@@ -133,7 +133,7 @@ const windowWidth = window.innerWidth;
         flex-flow: row;
         flex-direction: row-reverse;
         padding-bottom: 140px;
-        max-width: 1440px;
+        max-width: 2000px;
         margin: 0 auto;
 
         .FlexImagesWrapper {
@@ -222,7 +222,7 @@ const windowWidth = window.innerWidth;
             button {
                 padding: 15px 40px 15px 40px;
                 background: $gold600;
-                font-size: 28px;
+                font-size: 25px;
                 border-radius: 40px;
                 color: $white100;
                 border: none;

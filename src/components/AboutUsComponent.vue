@@ -292,7 +292,7 @@ onMounted(() => {
   margin: 0 auto;
   justify-content: space-around;
   padding-bottom: 200px;
-  max-width: 1400px;
+  max-width: 2000px;
 
   .aboutUsLeft {
     width: 40%;
@@ -312,7 +312,7 @@ onMounted(() => {
     }
 
     button {
-      font-size: 28px;
+      font-size: 25px;
       margin-top: 50px;
     }
 
@@ -441,7 +441,7 @@ onMounted(() => {
 @media screen and (min-width: 800px) and (max-width: 1023px) {
   .aboutUswrapper {
     width: 100%;
-    max-width: 1600px;
+    max-width: 2000px;
     margin: 0 auto;
 }
 
@@ -476,7 +476,7 @@ onMounted(() => {
   .aboutUswrapper {
     display: flex;
     justify-content: space-between;
-    max-width: 1400px;
+    max-width: 2000px;
     margin: 50px auto 0 auto;
 
     .aboutUsMain {
