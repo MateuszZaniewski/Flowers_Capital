@@ -11,7 +11,9 @@
                 <p>Whether you're an avid gardener, a DIY enthusiast, or just looking for new ways to bring the beauty of nature into your home, our blog has something for everyone. </p>
                 <p>Enjoy exploring the world of flowers with us. </p>
                 <button>Go to blog posts</button>
+                <img class="greyFlower4" src="../assets/greyFlower4.png" />
             </div>
+            
         </div>
         <div class="imageSection">
             <div class="image">
@@ -28,6 +30,7 @@
 
 .blogSection {
     position: relative;
+    z-index: 100;
     display: flex;
     max-width: 1400px;
     margin: 0 auto;
@@ -70,6 +73,8 @@
             color: $black900;
             margin: 0;
             padding-bottom: 36px;
+            position: relative;
+            z-index: 100;
         }
 
         button {
@@ -88,6 +93,12 @@
           }
     }
     
+    .greyFlower4 {
+        position: absolute;
+        bottom: 35%;
+        left: 0;
+        z-index: 1;
+    }
 }
 
 @media screen and (min-width: 1024px) {

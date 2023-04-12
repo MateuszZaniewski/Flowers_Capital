@@ -29,6 +29,7 @@ onMounted(() => {
       <p>Our mission is to provide our customers with the highest quality flowers and plants, along with exceptional customer service.</p>
       <p>All our products are 100% plastic-free, super sustainable and promote zero flower waste.</p>
     </div>
+    <img class="greyFlower1" src="../assets/greyFlower1.png" />
   </section>
 
   <div class="AboutUsMobileWrapper">
@@ -84,6 +85,7 @@ onMounted(() => {
 
 .aboutUswrapper {
   max-width: 800px;
+  position: relative;
 
   .aboutUsMain {
 
@@ -156,12 +158,18 @@ onMounted(() => {
 
   }
   
+  .greyFlower1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 
 .aboutUsInfos{
   margin-right: 32px;
   position: relative;
+  z-index: 2;
   margin-bottom: $spc32;
   margin-left: clamp(10px, 20vw, 130px);
 

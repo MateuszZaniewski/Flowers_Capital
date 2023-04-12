@@ -40,6 +40,7 @@
             <p>And more! </p>
             <p>Contact us today to schedule a consultation and let us bring the beauty of flowers to your wedding celebration.</p>
             <button>Contact us</button>
+            <img class="greyFlower3" src="../assets/greyFlower3.png" />
         </div>
     </section>
     
@@ -274,6 +275,8 @@
     
     
     .weddingListWrapper {
+        position: relative;
+        z-index: 100;
         width: 80%;
         padding-right: 16px;
         margin-left: clamp(10px, 20vw, 130px);
@@ -322,6 +325,13 @@
             background: $gold700;
           }
     
+          .greyFlower3 {
+            position: absolute;
+            top: 30%;
+            right: 0;
+            z-index: 1;
+          }
+
     }
 }
 

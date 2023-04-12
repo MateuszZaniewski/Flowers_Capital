@@ -11,6 +11,7 @@ const windowWidth = window.innerWidth;
             <p>Discover our offer, select your desired flowers or plants, and we'll take care of the rest.</p>
             <button>Go to our shop</button>
         </div>
+        <img class="greyFlower2" src="../assets/greyFlower2.png" />
     </div>
     <div class="shop__categories">
         <div class="indoorplantsWrapper flex6"> 
@@ -63,7 +64,7 @@ const windowWidth = window.innerWidth;
         margin: 0;
         width: fit-content;
         position: absolute;
-        z-index: 1;
+        z-index: 100;
         top: 0%;
         left: 4%;
         writing-mode: vertical-lr;
@@ -76,6 +77,7 @@ const windowWidth = window.innerWidth;
         margin-right: 32px;
         margin-left: clamp(10px, 20vw, 130px);
         padding-bottom: $spc36;
+        z-index: 100;
 
         h3 {
             font-size: $mobileH3;
@@ -110,6 +112,11 @@ const windowWidth = window.innerWidth;
           }
     }
     
+    .greyFlower2 {
+        position: absolute;
+        top: 5%;
+        right: 0;
+    }
 }
 
 .shop__categories {
