@@ -3,7 +3,7 @@ const windowWidth = window.innerWidth;
 </script>
 
 <template>
-    <div class="shopWrapper">
+    <div id="shop" class="shopWrapper">
         <h2>Shop</h2> 
         <div class="shopInfos">
             <h3>We offer convenient online ordering and delivery services.</h3>

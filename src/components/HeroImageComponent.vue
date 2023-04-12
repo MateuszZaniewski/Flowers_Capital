@@ -1,11 +1,5 @@
 <script setup>
 
-const scrollDown = () => {
-  let scrollPosition = 0
-  const heightOfScreen = window.innerHeight
-  scrollPosition += heightOfScreen
-  window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
-};
 </script>
 
 <template>
@@ -19,7 +13,7 @@ const scrollDown = () => {
             </div>
         </div>
         <div class="downWrapper">
-            <img src="../assets/downPage.png"  @click="scrollDown()"/>
+            <a href="#about_us"><img src="../assets/downPage.png"/></a>
         </div>
     </main>
 </template>

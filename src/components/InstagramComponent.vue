@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="preWrapper">
+    <div id="gallery" class="preWrapper">
         <div class="instagramWrapper">
             <div class="instagram__Component">
                 <div class="component--foto o1-1">

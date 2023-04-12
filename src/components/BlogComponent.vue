@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="blogWrapper">
+    <div id="blog" class="blogWrapper">
         <div class="blogSection">
             <h2>Blog</h2> 
             <div class="blogInfos">

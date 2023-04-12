@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="footerComponentWrapper">
+    <div id="contact" class="footerComponentWrapper">
         <div class="footer__logo">
             <p>Flowers'</p>
             <p>Capital</p>
@@ -30,11 +30,11 @@
         </div>
         <div class="footer__linksWrapper">
             <div class="footer__links">
-                <a>ABOUT US</a>
-                <a>GALLERY</a>
-                <a>SHOP</a>
-                <a>BLOG</a>
-                <a>WEDDINGS</a>
+                <a href="#about_us">ABOUT US</a>
+                <a href="#gallery">GALLERY</a>
+                <a href="#shop">SHOP</a>
+                <a href="#blog">BLOG</a>
+                <a href="#weddings">WEDDINGS</a>
             </div>
             <div class="footer__image">
                 <div class="image"></div>
@@ -145,6 +145,8 @@
                 width: 50%;
                 padding-bottom: 20px;
                 font-size: $mobileBody;
+                text-decoration: none;
+                color: $gold600;
                 
             }
         }

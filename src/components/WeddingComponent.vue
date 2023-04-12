@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section class="weddingComponentMobile">
+    <section id="weddings" class="weddingComponentMobile">
         <div class="weddingComponentWrapper">
             <h2>Weddings</h2> 
             <div class="weddingInfos">
@@ -44,7 +44,7 @@
     </section>
     
 
-    <section class="weddingComponentDesktop">
+    <section id="weddings" class="weddingComponentDesktop">
         <div class="weddingComponentWrapper">
             <h2>Weddings</h2> 
             <div class="weddingInfos">

@@ -5,7 +5,6 @@ let toggled = ref(true)
 
 function isToggled() {
     toggled.value = !toggled.value
-    console.log(toggled.value)
 }   
 </script>
 
@@ -26,16 +25,16 @@ function isToggled() {
             <div class="desktopHeader">
                 <div class="desktopWrapper">
                     <div class="desktop__spansWrapperLeft flexCenter">
-                        <span class="redirect--span">ABOUT US</span>
-                        <span class="redirect--span">SHOP</span>
-                        <span class="redirect--span">WEEDINGS</span>
+                        <a href="#about_us" class="redirect--span">ABOUT US</a>
+                        <a href="#shop" class="redirect--span">SHOP</a>
+                        <a href="#weddings" class="redirect--span">WEEDINGS</a>
                     </div>
                     <div class="desktop__logoWrapper flexCenter">
                         <span class="logo--span">Flowers'Capital</span>
                     </div>
                     <div class="desktop__spansWrapperRight flexCenter">
-                        <span class="redirect--span">BLOG</span>
-                        <span class="redirect--span">CONTACT</span>
+                        <a href="#blog" class="redirect--span">BLOG</a>
+                        <a href="#contact" class="redirect--span">CONTACT</a>
                     </div>
                     <div class="desktop__icons flexCenter">
                         <img id="shopping" src="../assets/shopping.png" />
@@ -46,11 +45,11 @@ function isToggled() {
             <div :style="{ display: !toggled ? 'block' : 'none'}"
             class="dropdown">
                 <div class="dropdown__links">
-                    <span>About us</span>
-                    <span>Shop</span>
-                    <span>Weedings</span>
-                    <span>Gallery</span>
-                    <span>Blog</span>
+                    <a @click="isToggled" href="#about_us">About us</a>
+                    <a @click="isToggled" href="#shop">Shop</a>
+                    <a @click="isToggled" href="#weddings">Weedings</a>
+                    <a @click="isToggled" href="#gallery">Gallery</a>
+                    <a @click="isToggled" href="#blog">Blog</a>
                 </div>  
                 <div class="dropdown__contact">
                     <span>Phone: 212 236-7842</span>
@@ -176,6 +175,8 @@ function isToggled() {
 
         .redirect--span {
             cursor: pointer;
+            text-decoration: none;
+            color: $gold600;
         }
 
         .redirect--span:after {
@@ -248,6 +249,12 @@ function isToggled() {
             
             span {
                 padding-bottom: 1.286vh;
+            }
+
+            a {
+                cursor: pointer;
+                color: black;
+                text-decoration: none;
             }
         }
 

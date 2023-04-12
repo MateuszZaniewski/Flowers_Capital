@@ -13,7 +13,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="aboutUswrapper">
+  <section id="about_us" class="aboutUswrapper">
     <div class="aboutUsMain">
       <div class="aboutUsMain__header" ref="headerWidth">
           <h2>About us</h2> 
