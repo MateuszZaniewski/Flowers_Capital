@@ -80,17 +80,16 @@ const windowWidth = window.innerWidth;
         z-index: 100;
 
         h3 {
-            font-size: 2.222vw;
-            line-height: 2.361vw;
+            font-size: $mobileH3;
+            line-height: 34px;
             color: $black900;
             margin: 0;
             padding-bottom: 40px;
-
         }
 
         p {
-            font-size: 1.597vw;
-            line-height: 1.917vw;
+            font-size: $mobileBody;
+            line-height: 27px;
             color: $black900;
             margin: 0;
             padding-bottom: 20px;
@@ -101,10 +100,8 @@ const windowWidth = window.innerWidth;
             background: $gold600;
             font-size: $mobileBody;
             border-radius: 40px;
-            color: $white100;
             border: none;
-            line-height: 27.6px;
-            margin-top: 13px;
+            color: $white100;
         }
 
         button:hover {
@@ -128,7 +125,29 @@ const windowWidth = window.innerWidth;
     .shopWrapper {
 
         .shopInfos {
-
+            width: 80%;
+            margin-right: 32px;
+            margin-left: clamp(10px, 20vw, 180px);
+            padding-bottom: $spc36;
+            z-index: 100;
+    
+            h3 {
+                font-size: 2.222vw;
+                line-height: 2.361vw;
+                color: $black900;
+                margin: 0;
+                padding-bottom: 40px;
+    
+            }
+    
+            p {
+                font-size: 1.597vw;
+                line-height: 1.917vw;
+                color: $black900;
+                margin: 0;
+                padding-bottom: 20px;
+            }
+    
             button {
                 display: none;
             }

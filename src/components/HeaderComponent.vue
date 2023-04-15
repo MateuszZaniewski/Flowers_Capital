@@ -27,7 +27,7 @@ function isToggled() {
                     <div class="desktop__spansWrapperLeft flexCenter">
                         <a href="#about_us" class="redirect--span">ABOUT US</a>
                         <a href="#shop" class="redirect--span">SHOP</a>
-                        <a href="#weddings" class="redirect--span">WEEDINGS</a>
+                        <a href="#wedd" class="redirect--span">WEEDINGS</a>
                     </div>
                     <div class="desktop__logoWrapper flexCenter">
                         <span class="logo--span">Flowers'Capital</span>

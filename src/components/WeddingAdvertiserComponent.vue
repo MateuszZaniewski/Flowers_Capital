@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div id="weddings" class="mobileAndTabletView">
+    <div class="mobileAndTabletView">
         <div class="weddingWrapper">
             <div class="weddingFoto"></div>
             <div class="weddingText">
@@ -11,7 +11,7 @@
             </div>
         </div>
     </div>
-    <div id="weddings" class="desktopView">
+    <div id="wedd" class="desktopView">
         <div class="weddingWrapper">
             <div class="weddingFoto">
                 <div class="weddingText">
