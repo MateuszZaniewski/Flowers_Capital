@@ -68,7 +68,7 @@ const windowWidth = window.innerWidth;
         top: 0%;
         left: 4%;
         writing-mode: vertical-lr;
-        font-size: 44px;
+        font-size: 35px;
         
       }
 
@@ -123,6 +123,10 @@ const windowWidth = window.innerWidth;
 
 @media screen and (min-width: 1024px) {
     .shopWrapper {
+
+        h2 {
+            font-size: 44px;
+        }
 
         .shopInfos {
             width: 80%;
