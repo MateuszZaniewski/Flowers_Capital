@@ -47,7 +47,7 @@
             background-size: cover;
             height: 126.41vw;
             width: 100%;
-            max-width: 500px;
+            max-width: 800px;
             max-height: 700px;
         }
 
@@ -88,7 +88,7 @@
         h1 {
             text-align: center;
             color: $gold600;
-            font-size: $desktopH1;
+            font-size: clamp($desktopH1, 5.972vw, 120px);
             padding-top: 20px;
             text-align: left;
             line-height: 85.14px;
@@ -99,7 +99,7 @@
             flex-flow: column;
             justify-content: center;
             width: 45%;
-            padding-left: 40px;
+            padding-left: 2.778vw;
             
         }
     
@@ -108,6 +108,7 @@
             height: auto;
             width: 60%;
             justify-content: flex-end;
+            max-width: 900px;
             
     
             .heroImage__image {

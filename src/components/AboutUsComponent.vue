@@ -314,13 +314,14 @@ onMounted(() => {
     }
 
     p {
-      font-size: $desktopH6;
+      font-size: 1.597vw;
+      line-height: 1.917vw;
       padding-bottom: $spc32;
       margin: 0;
     }
 
     button {
-      font-size: 25px;
+      font-size: 1.736vw;
       margin-top: 50px;
     }
 
@@ -500,8 +501,10 @@ onMounted(() => {
         padding-bottom: 20px;
   
         .imageDiv {
-          height: 660px;
-          width: 420px;
+          height: 35.625vw;
+          width: 25.833vw;
+          max-height: 680px;
+          max-width: 550px;
           background-image: url("../assets/aboutImageHighRes.png");
           background-size: cover;
           background-repeat: no-repeat;
@@ -513,6 +516,7 @@ onMounted(() => {
         width: 20%;
         max-width: 130px;
         position: relative;
+        font-size: 3.056vw;
         
   
         h2 {
@@ -538,16 +542,16 @@ onMounted(() => {
     
       h3 {
         color: $gold600;
-        line-height: 33.6px;
-        font-size: $desktopH4;
+        line-height: 2.667vw;
+        font-size: 2.431vw;
         letter-spacing: -1px;
         padding-bottom: $spc32;
         width: 100%;
       }
     
       p {
-        line-height: 27px;
-        font-size: $desktopH6;
+        line-height: 1.917vw;
+        font-size: 1.597vw;
         padding-bottom: 21px;
         width: 80%;
       }

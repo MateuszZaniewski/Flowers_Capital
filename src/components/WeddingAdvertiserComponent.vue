@@ -71,7 +71,7 @@
     .desktopView {
         display: block;
         padding-bottom: 100px;
-        max-width: 1500px;
+        max-width: 2000px;
         margin: 0 auto;
     
         .weddingFoto {
@@ -91,11 +91,12 @@
             }
     
             .weddingText {
-                
+                display: flex;
+                justify-content: center;
                 h3 {
-                    font-size: $desktopH1;
+                    font-size: 5.972vw;
                     color: $gold600;
-                    line-height: 85.14px;
+                    line-height: 5.913vw;
                     margin: 0;
                     position: absolute;
                     bottom: 30px;

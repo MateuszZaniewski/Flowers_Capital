@@ -54,7 +54,7 @@ const windowWidth = window.innerWidth;
 .shopWrapper {
     position: relative;
     display: flex;
-    max-width: 1400px;
+    max-width: 2000px;
     margin: 0 auto;
 
         h2 {
@@ -68,20 +68,20 @@ const windowWidth = window.innerWidth;
         top: 0%;
         left: 4%;
         writing-mode: vertical-lr;
-        font-size: $mobileH2;
+        font-size: 44px;
         
       }
 
     .shopInfos {
         width: 80%;
         margin-right: 32px;
-        margin-left: clamp(10px, 20vw, 130px);
+        margin-left: clamp(10px, 20vw, 180px);
         padding-bottom: $spc36;
         z-index: 100;
 
         h3 {
-            font-size: $mobileH3;
-            line-height: 34px;
+            font-size: 2.222vw;
+            line-height: 2.361vw;
             color: $black900;
             margin: 0;
             padding-bottom: 40px;
@@ -89,8 +89,8 @@ const windowWidth = window.innerWidth;
         }
 
         p {
-            font-size: $mobileBody;
-            line-height: 27px;
+            font-size: 1.597vw;
+            line-height: 1.917vw;
             color: $black900;
             margin: 0;
             padding-bottom: 20px;
@@ -171,8 +171,8 @@ const windowWidth = window.innerWidth;
     
         .textstyles {
             color: $gold600;
-            font-size: 32px;
-            line-height: 38.4px;
+            font-size: 2.222vw;
+            line-height: 2.667vw;
             text-align: center;
             background-color: $white100;
             position: absolute;

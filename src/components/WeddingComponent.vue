@@ -366,7 +366,7 @@
                 top: 0%;
                 left: 4%;
                 writing-mode: vertical-lr;
-                font-size: $mobileH2;
+                font-size: 44px;
                 
               }
         
@@ -374,12 +374,12 @@
             .weddingInfos {
                 width: 80%;
                 margin-right: 32px;
-                margin-left: clamp(10px, 20vw, 130px);
+                margin-left: clamp(10px, 20vw, 180px);
                 padding-bottom: $spc36;
         
                 h3 {
-                    font-size: $desktopH3;
-                    line-height: 34px;
+                    font-size: 1.597vw;
+                    line-height: 2.361vw;
                     color: $black900;
                     margin: 0;
                     padding-bottom: 40px;
@@ -387,8 +387,8 @@
                 }
         
                 p {
-                    font-size: $desktopH6;
-                    line-height: 27.6px;
+                    font-size: 1.597vw;
+                    line-height: 2.361vw;
                     color: $black900;
                     margin: 0;
                     padding-bottom: 20px;
@@ -540,7 +540,7 @@
                     margin: 0 auto;
                     padding-right: 16px;
                     padding-bottom: $spc36;
-                    font-size: $desktopH6;
+                    font-size: 1.597vw;
                 
                     p {
                         margin: 0;
@@ -558,7 +558,7 @@
                         margin: 0;
                 
                         li {
-                            line-height: 27px;
+                            line-height: 1.875vw;
                             padding-bottom: 10px;
                 
                             &:before {
@@ -578,12 +578,12 @@
                     button {
                         padding: 15px 40px 15px 40px;
                         background: $gold600;
-                        font-size: 25px;
+                        font-size: 1.944vw;
                         border-radius: 40px;
                         color: $white100;
                         border: none;
-                        line-height: 27.6px;
-                        margin-top: 13px;
+                        line-height: 2.333vw;
+                        margin-top: 0.903vw;
                     }
 
                     button:hover {

@@ -1,5 +1,5 @@
 <script setup>
-const windowWidth = window.innerWidth;
+
 </script>
 
 <template>
@@ -142,6 +142,7 @@ const windowWidth = window.innerWidth;
             justify-content: center;
             padding-bottom: 36px;
             width: 70%;
+            max-width: 1350px;
             
             
             .image__container1, .image__container2 {
@@ -209,12 +210,13 @@ const windowWidth = window.innerWidth;
             justify-content: center;
             padding-bottom: 0;
             width: 30%;
+            max-width: 600px;
         
         
             h2 {
-                font-size: $desktopH1;
+                font-size: 5.972vw;
                 color: $gold600;
-                line-height: 85.14px;
+                line-height: 5.913vw;
                 text-align: center;
         
             }
@@ -222,11 +224,11 @@ const windowWidth = window.innerWidth;
             button {
                 padding: 15px 40px 15px 40px;
                 background: $gold600;
-                font-size: 25px;
+                font-size: 1.736vw;
                 border-radius: 40px;
                 color: $white100;
                 border: none;
-                line-height: 33.6px;
+                line-height: 2.333vw;
                 margin-top: 60px;
             }
 

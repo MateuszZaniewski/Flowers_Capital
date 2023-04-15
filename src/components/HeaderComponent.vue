@@ -177,6 +177,7 @@ function isToggled() {
             cursor: pointer;
             text-decoration: none;
             color: $gold600;
+            font-size: clamp(18px, 1.611vw, 30px);
         }
 
         .redirect--span:after {

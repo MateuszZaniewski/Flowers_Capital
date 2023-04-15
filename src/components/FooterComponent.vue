@@ -114,14 +114,18 @@
 
                 #facebook:hover{
                     content: url('../assets/facebookHover.png');
+                    height: 2.431vw;
+                    width: 2.431vw;
                 }
 
                 #instagram:hover{
                     content: url('../assets/instagramHover.png');
+                    height: 2.431vw;
                 }
 
                 #pinterest:hover{
                     content: url('../assets/pinterestHover.png');
+                    height: 2.431vw;
                 }
             }
         }
@@ -183,7 +187,7 @@
             padding-bottom: 40px;
             max-width: auto;
             margin: 0;
-            font-size: $desktopH3;
+            font-size: 3.056vw;
             
     
             p {
@@ -204,7 +208,7 @@
             padding-bottom: 5.83vw;
 
             .addressRest {
-                font-size: $desktopH6;
+                font-size: 1.597vw;
                 padding-top: 4px;
                 line-height: 27px;
             }
@@ -220,7 +224,7 @@
             }
 
             .footer--tittle {
-                font-size: $desktopH5;
+                font-size: 1.944vw;
                 padding-bottom: 25px;
             }
 
@@ -265,7 +269,7 @@
                 a {
                     width: fit-content;
                     padding-bottom: 0px;
-                    font-size: $mobileBody;
+                    font-size: 1.25vw;
                     cursor: pointer;
                 }
 

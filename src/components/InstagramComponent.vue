@@ -223,15 +223,27 @@
             max-height: none;
     
             p {
-                font-size: $desktopH6;
+                font-size: 1.597vw;
             }
     
             p + p {
-                font-size: $desktopBody;
+                font-size: 1.25vw;
             }
     
         }
     }
+}
+
+@media screen and (min-width: 2000px) {
+
+    .instagramWrapper {
+        
+        .instagram__Component {
+            gap: 20px;
+            margin: 0 auto;
+            max-width: 1600px;
+        }
+}
 }
 
 </style>

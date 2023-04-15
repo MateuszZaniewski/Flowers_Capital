@@ -39,4 +39,5 @@ import FooterComponent from '../components/FooterComponent.vue';
   background: #F7F8FA;
 }
 
+
 </style>

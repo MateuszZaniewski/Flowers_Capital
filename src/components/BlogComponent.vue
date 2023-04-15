@@ -112,25 +112,26 @@
         .blogSection {
             position: relative;
             display: flex;
-            max-width: 1400px;
+            max-width: auto;
             margin: 0 auto;
 
             h2 {
-                font-size: $desktopH4;
+                font-size: 44px;
                 left: 6%;
             }
 
 
             .blogInfos {
-                margin-left: clamp(10px, 20vw, 130px);
+                margin-left: clamp(10px, 20vw, 180px);
                 width: 70%;
 
                 p {
-                    font-size: $desktopH6;
+                    font-size: 1.597vw;
+                    line-height: 1.917vw;
                 }
 
                 button {
-                    font-size: 25px;
+                    font-size: 1.736vw;
                 }
             }
             
